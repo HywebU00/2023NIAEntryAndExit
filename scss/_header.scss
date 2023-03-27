@@ -1,0 +1,54 @@
+.header{
+  @extend %mainWidth; margin-top: 30px; margin-bottom: 60px;
+  display: flex;flex-flow:row wrap; align-items: flex-start;
+
+  hgroup{
+    flex: 1 1 50%;
+    display: flex; flex-flow:row nowrap; align-items: center;
+    // outline: 1px dashed red;
+    img.logo {
+     width: 64px; height: 64px; margin-right: 10px;
+    }
+    img.title{
+      height: 28px; margin-bottom: 3px;
+    }
+
+    h1{
+      margin: 0 0 0 10px; padding: 0; 
+      font-size: 28px; line-height: 1.1; letter-spacing: -1px;white-space: nowrap;
+      color: $secondary;
+      // outline: 1px solid red;
+    }
+  }
+
+  .loginInfo{
+    flex: 1 1 50%;
+    color: $fontColorDim;
+    // outline: 1px dashed red;
+    ul{
+      list-style: none; margin: 0; padding: 0;
+      line-height: 1.1; font-size: .88em;
+      display: flex; flex-flow: row nowrap; justify-content: flex-end;
+    }
+    li{
+      position: relative;white-space: nowrap;
+      // display: inline-block;
+      flex: 0 0 auto;
+      padding-left: 1.2em; margin:.5em 0 .5em 1.2em;
+      &::before{
+        content: ''; position: absolute; left: 0; top: 0;
+        width: 1px; height: .9em;
+        background-color: $fontColorDim;
+      }
+      &:first-child{
+        &::before{ display: none;}
+      }
+
+      time{
+        display: inline-block;
+        color: $hilight;
+        &+time{ margin-left: .5em;}
+      }
+    }
+  }
+}

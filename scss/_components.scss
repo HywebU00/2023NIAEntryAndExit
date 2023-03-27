@@ -1,0 +1,58 @@
+// button
+button.funcBtn{
+  border: none; outline: none;
+  height: 3em; padding: 0 1.5em; border-radius: 2em;margin: 4px;
+  background: $btnBg1;color: $btnColor;
+  transition: .2s;
+  &:hover, &:focus{box-shadow: $btnBg1Hover 0 0 0 2px; background: $btnBg1Hover;}
+
+}
+.button {
+  display: inline-block; margin: 4px;
+  a{
+    display: block; text-decoration: none; text-align: center;
+    background: $btnBg2; color: $btnColor;
+    height: 3em; line-height: 3; padding: 0 1.5em; border-radius: 2em;
+    transition: .2s;
+    &:hover, &:focus{box-shadow: $btnBg2Hover 0 0 0 2px;background: $btnBg2Hover;}
+  }
+  &.detail{
+    a{
+      background-color: $btnBg3;
+      &:hover, &:focus{box-shadow: $btnBg3Hover 0 0 0 2px;background: $btnBg3Hover;}
+      &::before{
+        content: ''; display: inline-block;width: 18px;height: 18px;
+        vertical-align: middle; margin-right: 8px;
+        background: url(../images/icon_search.svg) no-repeat center center;
+        background-size: 100% auto;
+      }
+    }
+    &:only-child{
+      width: 96%;
+    }
+  }
+}
+
+.btnGroup{
+  @extend %mainWidth; margin-top: 20px; margin-bottom: 60px;
+  display: flex; flex-flow: row wrap;
+  .left, .right{
+    flex: 1 1 auto;
+    display: flex; flex-flow: row wrap;
+    // outline: 1px solid red;
+  }
+  
+  .left{
+    justify-content: flex-start;
+  }
+  
+  .right{
+     justify-content: flex-end;
+     display: flex; flex-flow: row wrap;
+  }
+}
+
+
+// 表單元件
+input, select, button, textarea{ font-size: inherit;}
+button, input{ cursor: pointer;}
