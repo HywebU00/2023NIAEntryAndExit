@@ -28,7 +28,7 @@ button.funcBtn{
       }
     }
     &:only-child{
-      width: 96%;
+      width: 90%; max-width: 470px;
     }
   }
 }
