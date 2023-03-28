@@ -6,7 +6,7 @@ $numberBgHover:#3F5073;
 .page{
   @extend %mainWidth; margin-top: 24px;
   display: flex; flex-flow: row wrap;justify-content: center;
-  text-align: center;
+  text-align: center; font-weight: 600; font-size: 1.125rem;
 
   // outline: 1px dashed #fff3;
   ul{list-style: none; margin: 0; padding: 0;}

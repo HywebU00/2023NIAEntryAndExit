@@ -1,12 +1,35 @@
+// 單元標題
+h2 {
+  margin: 0 auto 16px;
+  font-size:  1.6em;
+
+  text-align: center; line-height: 1.2;
+  em.idNumb{
+    font-style: normal; font-weight: 900;
+    display: inline-block;
+  }
+}
+
+
 // button
+button.funcBtn, .button{
+  font-size: 1.25rem; font-weight: 600;
+
+  @media screen and (max-width: 1200px){
+    font-size: 1rem;
+  } 
+}
+
+// <button>元件
 button.funcBtn{
   border: none; outline: none;
   height: 3em; padding: 0 1.5em; border-radius: 2em;margin: 4px;
   background: $btnBg1;color: $btnColor;
   transition: .2s;
   &:hover, &:focus{box-shadow: $btnBg1Hover 0 0 0 2px; background: $btnBg1Hover;}
-
 }
+
+// 連結 button
 .button {
   display: inline-block; margin: 4px;
   a{
@@ -52,7 +75,3 @@ button.funcBtn{
   }
 }
 
-
-// 表單元件
-input, select, button, textarea{ font-size: inherit;}
-button, input{ cursor: pointer;}

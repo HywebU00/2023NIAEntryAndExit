@@ -9,7 +9,7 @@ body{
   background-color: $bodyBg; color: $fontColor;
   // font-family: "Poppins", "Noto Sans TC", "Microsoft JhengHei", PingFang, STHeiti, sans-serif, serif;
   font-family: Arial, Helvetica, sans-serif, "LiHei Pro", "Microsoft JhengHei";
-  font-size: 1.125em; font-weight: 500;
+  font-size: 16px; font-weight: 500;
 
   *{
     box-sizing: border-box;
@@ -23,12 +23,3 @@ a{
   outline: none;
 }
 
-h2 {
-  margin: 0 auto 1.5em;
-  font-size: 2em; font-weight: 900;
-  text-align: center; line-height: 1.2;
-  em.idNumb{
-    font-style: normal ;
-    display: inline-block;
-  }
-}

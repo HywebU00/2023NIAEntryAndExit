@@ -15,37 +15,36 @@
   .basicInfo{
     position: relative; width: calc(100% - 180px);
     border: 2px solid $borderColorDim; border-left: none; border-right: none;
-    border-radius: 16px; padding: 16px 0; padding: 5px;
+    border-radius: 16px; padding: 8px 0; padding: 5px;
     dl{
       position: relative; top: 50%; transform: translateY(-50%);
-      display: flex; flex-flow: column wrap; width: 97%;
-      line-height: 1.2; height: 5.6em; padding:0; margin: 0 auto;
-      font-weight: 600;
+      width:100%; line-height: 1.2; 
+      padding:0; margin: 0 auto;
+      
+      display: flex; flex-flow: row wrap;
       &>div {
-        overflow: hidden; margin:.8em 1%;
+        flex: 0 0 23%;margin:.6em 1%;overflow: hidden; 
+        // outline: 1px dashed #f0c8;
+        &.nameEng{ flex-basis: 73%; }
       }
     }
     dt{
-      float: left;
+      float: left; width: 4.8em;
       position: relative; padding: 0 .8em 0 0; margin: 0;
-      color: $fontColorDim;
+      color: $fontColorDim; text-align: right;
       &::after{
         content: ''; position: absolute; right: .38em; top: .18em;
         width: 2px; height: .9em; background: $fontColorDim;
       }
     }
-    dd{ margin: 0; float: left;}
+    dd{ margin: 0; float: left; width:calc(100% - 4.8em);  }
+
 
     @media screen and (max-width: 1400px){
-      dl{
-        height: 7.2em;
-        &>div{
-          margin: .6em 1.2%;
-        }
-      }
-      dt{
-        font-size: .88em;
-      }
+
+      // dt{
+      //   font-size: .88em;
+      // }
     }
   }
 

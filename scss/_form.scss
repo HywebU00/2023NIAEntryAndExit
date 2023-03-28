@@ -12,7 +12,7 @@ label {
 }
 
 input, textarea, select, button, datalist {
-  font-size: inherit; font-family: inherit;
+  font-size: 1rem; font-family: inherit;
   box-sizing: border-box; outline: none;
   &:focus{ outline: none;}
 }
@@ -74,15 +74,6 @@ input[type="week"] {
   &.halfWidth{width: calc(50% - 3px);}
 }
 
-// 帶入的資料
-
-.known{
-  @extend %textInput; 
-  border-color: transparent; background-color: transparent;
-  color: $fontColorDark;
-  &:hover, &:focus{ border-color: transparent}
-}
-
 
 // 下拉選單 ////////////////////////////
 select {
@@ -91,7 +82,7 @@ select {
 }
 
 // 按鈕樣式 ////////////////////////////
-.button>a, button,
+button,
 input[type="submit"], input[type="button"] , input[type="reset"]{
   appearance: none;
   -webkit-appearance: none;
@@ -104,7 +95,8 @@ input[type="submit"], input[type="button"] , input[type="reset"]{
   cursor: pointer; transition: .15s;
 }
 
-.button>a, button, input[type="submit"], input[type="button"]{
+// .button>a, 
+button, input[type="submit"], input[type="button"]{
   background-color: $btnBg1; color: $fontInvert;
   &:hover, &:focus {
     background-color: $btnBg2; 
@@ -114,7 +106,7 @@ input[type="submit"], input[type="button"] , input[type="reset"]{
   }
 }
 
-.button>a{ border-radius: 2em;}
+// .button>a{ border-radius: 2em;}
 
 input[type="reset"]{
   background-color: $inputBg; color: $btnBg1;
@@ -125,10 +117,10 @@ input[type="reset"]{
   &:focus{box-shadow: transparent 0 0 0 2px inset, $btnBg2 0 0 0 3px; }
 }
 
-.button{
-  display: inline-block; vertical-align: middle;
-  &>a{display: block; text-decoration: none; text-align: center; white-space: nowrap; }
-}
+// .button{
+//   display: inline-block; vertical-align: middle;
+//   &>a{display: block; text-decoration: none; text-align: center; white-space: nowrap; }
+// }
 
 textarea {
   @extend %textInput;
@@ -216,7 +208,7 @@ input[type="submit"][disabled]:hover,
 button[disabled]:focus,
 input[type="submit"][disabled]:focus {
   background-color: $gray;
-  color: $fontColorLight;
+  color: $fontColorDim;
   box-shadow: none;
   cursor: default;
 }

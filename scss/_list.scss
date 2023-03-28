@@ -5,38 +5,45 @@
 
   &>table{
     width: 100%; border-collapse: collapse;
-    line-height: 1.5; font-weight: 700;
+    line-height: 1.5;
     border-bottom: 2px solid $borderColorDim;
-
+    font-weight: 700; font-size: 1.125rem;
     th, td{ 
       padding: .7em .6em .6em; text-align: center; transition: .2s;
       &>span{
-        display: inline-block;
+        display: inline-block; position: relative;
         &:first-child{
           &:not(:only-child) {
-            margin-right: .3em;
+            padding-right: 1em;
             &::after{
-              content: '/'; margin-left: .4em;margin-right: .2em;
+              content: ''; position: absolute; right: .2em; top: 44%;
+              width: 4px; height: 4px; border-radius: 2px;
+              margin-left: .4em;margin-right: .2em;
               vertical-align: middle;font-size: .95em;
             }
           }
         }
-        // &+span{ margin-left: .2em;}
       }
     }
     th{
       background-color: $tbHeaderBg; color: $tbHeaderColor;
+      &>span::after{ background-color: $tbHeaderColor;}
     }
     td{
       border-bottom: 1px solid $borderColorDim;
+      &:first-child{
+        text-align: right;
+      }
+
+      &>span::after{ background-color: $fontColor;}
       time{
-        display: inline-block;
+        display: inline-block; 
         &+time{ margin-left: .5em;}
       }
       .spLabel{
         display: inline-block;
         &::before{ content: "〈";}
-        &::after{ content: "〉";}
+        &::after{ content: "〉" ; background: none;}
       }
 
     }
@@ -46,7 +53,27 @@
         td{border-bottom: none;}
       }
       &.now{
-        background-color: $hilight; color: #1A2233; font-size: 22px;
+        background-color: $hilight; color: $fontInvert; font-size: 1.11em;
+
+        td span::after {background-color: $fontInvert;}
+      }
+    }
+  }
+
+
+  @media screen and (max-width: 1200px){
+    &>table{
+      font-size: 1rem;
+
+      th{ font-size: .95em;}
+      td{
+        text-align: left;
+        &>span{ float: left;}
+        span{}
+        
+        time{
+          &+time{ margin-left: 0;}
+        }
       }
     }
   }
