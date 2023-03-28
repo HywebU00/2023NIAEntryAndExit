@@ -5,7 +5,7 @@
 
   &>table{
     width: 100%; border-collapse: collapse;
-    line-height: 1.5;
+    line-height: 1.5; font-weight: 700;
     border-bottom: 2px solid $borderColorDim;
 
     th, td{ 
@@ -26,7 +26,6 @@
     }
     th{
       background-color: $tbHeaderBg; color: $tbHeaderColor;
-      font-weight: normal;
     }
     td{
       border-bottom: 1px solid $borderColorDim;
@@ -47,7 +46,7 @@
         td{border-bottom: none;}
       }
       &.now{
-        background-color: $hilight; color: #1A2233;
+        background-color: $hilight; color: #1A2233; font-size: 22px;
       }
     }
   }
