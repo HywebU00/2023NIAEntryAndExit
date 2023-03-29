@@ -23,7 +23,7 @@
       
       display: flex; flex-flow: row wrap;
       &>div {
-        flex: 0 0 23%;margin:.6em 1%;overflow: hidden; 
+        flex: 0 0 23%;margin:.65em 1%;overflow: hidden; 
         // outline: 1px dashed #f0c8;
         &.nameEng{ flex-basis: 73%; }
       }
@@ -40,11 +40,11 @@
     dd{ margin: 0; float: left; width:calc(100% - 4.8em);  }
 
 
-    @media screen and (max-width: 1400px){
+    @media screen and (max-width: 1200px){
 
-      // dt{
-      //   font-size: .88em;
-      // }
+      dl>div{
+        // margin-top: .6em; margin-bottom: .6em;
+      }
     }
   }
 
