@@ -7,7 +7,7 @@
     width: 100%; border-collapse: collapse;
     line-height: 1.5;
     border-bottom: 2px solid $borderColorDim;
-    font-weight: 700; font-size: 1.125rem;
+    font-weight: 400; font-size: 1.125rem;
     th, td{ 
       padding: .7em .6em .6em; text-align: center; transition: .2s;
       &>span{
@@ -53,7 +53,8 @@
         td{border-bottom: none;}
       }
       &.now{
-        background-color: $hilight; color: $fontInvert; font-size: 1.11em;
+        background-color: $hilight; color: $fontInvert; 
+        font-size: 1.11em;font-weight: 600;
 
         td span::after {background-color: $fontInvert;}
       }
@@ -69,8 +70,6 @@
       td{
         text-align: left;
         &>span{ float: left;}
-        span{}
-        
         time{
           &+time{ margin-left: 0;}
         }
