@@ -1,0 +1,59 @@
+.search{
+  
+}
+
+
+table.formLayout{
+  outline: 1px dashed #f66;
+  border-collapse: collapse;
+  width: 80%; margin: 0 auto;
+  font-size: 1.125em; line-height: 1.5;
+  max-width: 50em;
+  td{
+    padding: 5px 0;
+    &:nth-child(odd) {
+      text-align: right; padding-right: .6em;
+      width: 11em;
+    }
+    &:nth-child(even) {
+      &>input[type="text"]:only-child{
+        width: calc(98% - 6px);
+      }
+    }
+  }
+
+  .duration, .optionGroup{
+    margin: 3px; width:  calc(98% - 6px);
+  }
+
+}
+
+// 表單模組
+.duration{
+  // outline: 1px dashed #9f3;
+  display: flex; align-items: center;
+  input{
+    flex: 1 1 40%; margin-right: 1.6em; margin-left: 5px;
+    &:last-child{ margin-right: 0;}
+  }
+}
+
+.optionGroup{
+  // outline: 1px dashed #9f3;
+  display: flex;
+
+  &>label{
+    @extend %textInput; 
+    flex: 0 0 10em;
+    background: $btnBg2; color: $fontInvert;
+    text-align: center; 
+
+    input{ }
+
+    &.checked{
+      background-color: $hilight;
+    }
+  
+  }
+
+}

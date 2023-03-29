@@ -10,6 +10,36 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <header class="header">
+    <hgroup>
+      <img class="logo" src="images/logo.png" alt="logo">
+      <img class="title" src="images/h1.svg" alt="內政部移民署"></img>
+      <h1>旅客入出境紀錄查詢</h1>
+    </hgroup>
+
+    <section class="loginInfo">
+      <ul>
+        <li>移民資訊組系統設計科 10001 測試帳號</li>
+        <li><time>20230303</time><time>18:07:33</time></li>
+      </ul>
+      <ul>
+        <li>202303030901.r0</li>
+        <li>雲端正式環境</li>
+        <li>WS:0(7001)桃園二期航站F110001</li>
+      </ul>
+      </section>
+  </header>
+
+  <h2>查詢模式</h2>
+
+  <div class="modeSwitch">
+    <button class="button"></button>
+
+    精準
+    模糊(英文姓名與中文姓名)
+  
+
+  </div>
 
   <section class="search">
     <form action="">
@@ -17,7 +47,7 @@
       <table class="formLayout">
         <tr>
           <td>入出境日期</td>
-          <td><div class="duration">起：<input type="date"> 迄：<input type="date"></div></td>
+          <td><div class="duration">起<input type="date"> 迄<input type="date"></div></td>
         </tr>
         <tr>
           <td>中文姓名</td>
@@ -33,13 +63,13 @@
         </tr>
         <tr>
           <td>出生日期</td>
-          <td><div class="duration">起：<input type="date"> 迄：<input type="date"></div></td>
+          <td><div class="duration">起<input type="date"> 迄<input type="date"></div></td>
         </tr>
         <tr>
           <td>性別</td>
           <td>
             <div class="optionGroup">
-              <label><input type="radio">全部</label>
+              <label class="checked"><input type="radio">全部</label>
               <label><input type="radio">男</label>
               <label><input type="radio">女</label>
             </div>
@@ -69,7 +99,7 @@
           <td>最近一次入出境狀態</td>
           <td>
             <div class="optionGroup">
-              <label><input type="radio">入出境</label>
+              <label class="checked"><input type="radio">入出境</label>
               <label><input type="radio">入境</label>
               <label><input type="radio">出境</label>
             </div>
