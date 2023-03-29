@@ -5,9 +5,9 @@
 
   &>table{
     width: 100%; border-collapse: collapse;
-    line-height: 1.5;
+    font-size: 1.125rem;line-height: 1.5;
     border-bottom: 2px solid $borderColorDim;
-    font-weight: 400; font-size: 1.125rem;
+    
     th, td{ 
       padding: .7em .6em .6em; text-align: center; transition: .2s;
       &>span{
@@ -26,8 +26,8 @@
       }
     }
     th{
-      background-color: $tbHeaderBg; color: $tbHeaderColor;
-      &>span::after{ background-color: $tbHeaderColor;}
+      background-color: $thBg; color: $thColor;
+      &>span::after{ background-color: $thColor;}
     }
     td{
       border-bottom: 1px solid $borderColorDim;
@@ -45,6 +45,7 @@
         &::before{ content: "〈";}
         &::after{ content: "〉" ; background: none;}
       }
+      .cx{ display: inline-block;}
 
     }
 

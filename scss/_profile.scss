@@ -13,9 +13,9 @@
 
   // basicInfo： 中、英文姓名，護照號碼，國籍等
   .basicInfo{
-    position: relative; width: calc(100% - 180px);
-    border: 2px solid $borderColorDim; border-left: none; border-right: none;
+    position: relative; width: calc(100% - 180px);font-size: 1.125rem;
     border-radius: 16px; padding: 8px 0; padding: 5px;
+    border: 2px solid $borderColorDim; border-left: none; border-right: none;
     dl{
       position: relative; top: 50%; transform: translateY(-50%);
       width:100%; line-height: 1.2; 
@@ -23,7 +23,7 @@
       
       display: flex; flex-flow: row wrap;
       &>div {
-        flex: 0 0 23%;margin:.65em 1%;overflow: hidden; 
+        flex: 0 0 23%;margin:.5em 1%;overflow: hidden; 
         // outline: 1px dashed #f0c8;
         &.nameEng{ flex-basis: 73%; }
       }
@@ -38,14 +38,6 @@
       }
     }
     dd{ margin: 0; float: left; width:calc(100% - 4.8em);  }
-
-
-    @media screen and (max-width: 1200px){
-
-      dl>div{
-        // margin-top: .6em; margin-bottom: .6em;
-      }
-    }
   }
 
 }

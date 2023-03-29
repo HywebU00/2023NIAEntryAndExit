@@ -1,0 +1,34 @@
+.details{
+  @extend %mainWidth; margin: 0 auto;
+  font-size: 1.125rem;
+
+  .whichRecord{
+    margin: 24px auto;
+    line-height: 1.1;text-align: center; color: $hilight;
+    .cx{ display: inline-block;}
+  }
+
+  table.meta{
+    width: 100%; border-collapse: collapse;
+    border-width: 3px 0; border-style: solid; border-color: $borderColor;
+    line-height: 1.5; 
+    background-color: $tableBg; color: $fontColor;
+
+    &+.meta{ margin-top: -3px;}
+  }
+  th, td{
+    padding: .6em .8em .5em;vertical-align: top;font-weight: 400;
+  }
+  th{
+    width: 11.33%;
+    text-align: right;
+    background-color: $thBg; color: $thColor;
+    border-bottom: 1px solid $tableBg;
+  }
+  td{
+    width: 22%;
+    border-bottom: 1px solid $borderColorDim;
+    &[colspan="3"]{ width: 55.33%;}
+    &[colspan="5"]{ width: 88.66%;}
+  }
+}
