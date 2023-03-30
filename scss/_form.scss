@@ -92,27 +92,26 @@ input[type="submit"], input[type="button"] , input[type="reset"]{
   cursor: pointer; transition: .15s;
 }
 
-// .button>a, 
-button, input[type="submit"], input[type="button"]{
-  background-color: $btnBg1; color: $fontInvert;
+button, input[type="submit"], input[type="button"], input[type="reset"]{
+  background-color: $btnBg2; color: $fontInvert;
   &:hover, &:focus {
-    background-color: $btnBg2; 
+    background-color: $btnBg2Hover;  box-shadow: $btnBg2Hover 0 0 0 2px;
   }
-  &:focus{
-    box-shadow: $white 0 0 0 1px, $btnBg2 0 0 0 4px;
-  }
+  
 }
 
+// .button>a, 
 // .button>a{ border-radius: 2em;}
 
-input[type="reset"]{
-  background-color: $inputBg; color: $btnBg1;
-  box-shadow: $btnBg1 0 0 0 2px inset;
-  &:hover, &:focus{
-    box-shadow: $btnBg2 0 0 0 2px inset; color: $btnBg2;
-  }
-  &:focus{box-shadow: transparent 0 0 0 2px inset, $btnBg2 0 0 0 3px; }
-}
+// input[type="reset"]{
+//   background-color: $btnBg2; color: $fontInvert;
+//   &:hover, &:focus{
+//     box-shadow: $btnBg2 0 0 0 2px inset;
+//   }
+//   &:focus{
+//     box-shadow: $btnBg2 0 0 0 1px, $btnBg2 0 0 0 4px;
+//   }
+// }
 
 // .button{
 //   display: inline-block; vertical-align: middle;

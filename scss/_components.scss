@@ -11,6 +11,10 @@ h2 {
   }
 }
 
+h3{
+  text-align: center
+}
+
 
 // btnGroup ////////////////////////////////////////
 .btnGroup{
@@ -83,11 +87,10 @@ button.funcBtn{
     font-size: 1.25rem; font-weight: 600;
     border: none; outline: none;
     height: 3em; min-width: 8em; padding: 0 1.5em; border-radius: 2em;
-
+   
     &.enter{
-      background-color: $btnBg3;
+      background-color: $btnBg3;width: 16em;
       &:hover{ background-color: $btnBg3Hover; box-shadow: $btnBg3Hover 0 0 0 2px; }
-      &:only-of-type{ width: 16em;}
     }
   
   }

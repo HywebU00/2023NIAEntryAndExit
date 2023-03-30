@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>個人除戶資料查詢 </title>
+  <title>個人除戶資料查詢</title>
 
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -44,9 +44,16 @@
         <tr>
           <td>除戶年份起訖</td>
           <td>
-            <div class="duration">起<input type="date"> 訖<input type="date"></div>
+            <div class="duration">
+              <input type="text" placeholder="起" name="qrySDate" class="form-control">
+              <span class="icon_calendar"></span>
+              <input type="text" placeholder="訖" name="qrySDate">
+              <span class="icon_calendar"></span>
+            </div>
           </td>
         </tr>
+      </table>
+      <table class="formLayout">
         <tr>
           <td>姓名</td>
           <td><input type="text"></td>
@@ -58,20 +65,29 @@
         <tr>
           <td>除戶年份起訖</td>
           <td>
-            <div class="duration">起<input type="date"> 訖<input type="date"></div>
+            <div class="duration">
+              <input type="text" placeholder="起" name="qrySDate" class="form-control">
+              <span class="icon_calendar"></span>
+              <input type="text" placeholder="訖" name="qrySDate">
+              <span class="icon_calendar"></span>
+            </div>
           </td>
         </tr>
         <tr>
           <td>出生年份起訖</td>
           <td>
-            <div class="duration">起<input type="date"> 訖<input type="date"></div>
+            <div class="duration">
+              <input type="text" placeholder="起" name="qrySDate" class="form-control">
+              <span class="icon_calendar"></span>
+              <input type="text" placeholder="訖" name="qrySDate">
+              <span class="icon_calendar"></span>
+            </div>
           </td>
         </tr>
-
       </table>
 
       <div class="btnDv">
-        <input type="submit" value="查詢">
+        <input class="enter" type="submit" value="查詢">
         <input type="reset" value="清除資料">
         <span class="button"><a href="#">回主選單</a></span>
       </div>
