@@ -13,9 +13,11 @@ table.formLayout{
   width: 90%; margin: 0 auto;max-width: 900px;
   font-size: 1.125em; line-height: 1.5;
   background-color: $tableBg;
+  border-top: 3px solid $borderColor;
+  border-bottom: 3px solid $borderColor;
   
   td{
-    padding: 10px 16px;
+    padding: 6px 16px;
     &:nth-child(odd) {
       text-align: right;width: 11.5em; font-weight: 400;
       background: $thBg; color: $thColor;
@@ -66,7 +68,6 @@ table.formLayout{
 // 表單模組 ////////////////////////////////////////
 // 起迄日期區間
 .duration{
-  // outline: 1px dashed #9f3;
   position: relative;
   display: flex; align-items: center;
   &::after{
@@ -74,8 +75,23 @@ table.formLayout{
     position: absolute; width: 1.2em; left: calc(50% - .6em);
   }
   input{
-    flex: 1 1 40%; margin-right: 1.6em; margin-left: 0;
-    &:last-child{ margin-right: 0;}
+    flex: 0 0 calc(50% - .8em); margin-right: 1.6em; margin-left: 0;
+    padding-right: 48px;
+    &:first-child{
+      & + .icon_calendar{right: calc(50% + 12px + .6em)}
+    }
+    &:last-of-type{ 
+      margin-right: 0;
+      & + .icon_calendar {right: 10px;}
+    }
+  }
+
+  .icon_calendar{
+    content: ''; position: absolute; left: auto;
+    flex: none;
+    width: 24px;height: 24px;
+    background: url(../images/icon_calendar.svg) no-repeat 0 0;
+    background-size: 100% auto;
   }
 }
 
