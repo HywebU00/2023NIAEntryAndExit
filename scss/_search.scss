@@ -1,14 +1,18 @@
+
+
+
 .search{
-  
+  @extend %mainWidth;
+
 }
 
 
 table.formLayout{
-  outline: 1px dashed #f66;
+  // outline: 1px dashed #f66;
   border-collapse: collapse;
-  width: 80%; margin: 0 auto;
+  width: 90%; margin: 0 auto;max-width: 900px;
   font-size: 1.125em; line-height: 1.5;
-  max-width: 50em;
+  
   td{
     padding: 5px 0;
     &:nth-child(odd) {
@@ -28,7 +32,36 @@ table.formLayout{
 
 }
 
-// 表單模組
+
+
+
+// 查詢模式切換 ////////////////////////////////////////
+.modeSwitch{
+  display: flex;
+  width: 80%; margin: 0 auto;max-width: 900px;
+  background-color: #000; padding: 8px; border-radius: 3em;
+  &>button{
+    flex: 1 1 48%; background-color: transparent; color: $fontColor;
+    box-shadow: none;
+    &:hover, &:focus{
+      background-color: transparentize($btnBg1, .7);
+    }
+    &.now{
+      background-color: $btnBg1; color: $fontInvert;
+      &:hover, &:focus{
+        background-color: $btnBg1Hover;
+      }
+    }
+  }
+  margin-bottom: 24px;
+
+}
+
+
+
+
+// 表單模組 ////////////////////////////////////////
+// 起迄日期區間
 .duration{
   // outline: 1px dashed #9f3;
   display: flex; align-items: center;
@@ -38,6 +71,7 @@ table.formLayout{
   }
 }
 
+// 多選或單選項目組
 .optionGroup{
   // outline: 1px dashed #9f3;
   display: flex;
@@ -48,7 +82,7 @@ table.formLayout{
     background: $btnBg2; color: $fontInvert;
     text-align: center; 
 
-    input{ }
+    input{ opacity: 0; font-size: 0; margin: 0; }
 
     &.checked{
       background-color: $hilight;
@@ -57,3 +91,4 @@ table.formLayout{
   }
 
 }
+

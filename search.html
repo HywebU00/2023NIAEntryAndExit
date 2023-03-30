@@ -32,22 +32,24 @@
 
   <h2>查詢模式</h2>
 
-  <div class="modeSwitch">
-    <button class="button"></button>
-
-    精準
-    模糊(英文姓名與中文姓名)
   
-
-  </div>
-
   <section class="search">
-    <form action="">
 
+    <div class="modeSwitch">
+      <button class="button now">精準</button>
+      <button class="button">模糊(英文姓名與中文姓名)</button>
+    </div>
+
+    <form action="">
       <table class="formLayout">
         <tr>
           <td>入出境日期</td>
-          <td><div class="duration">起<input type="date"> 迄<input type="date"></div></td>
+          <td>
+            <div class="duration"><!-- 起訖 -->
+              <input type="text" name="qrySDate" class="form-control">
+              <input type="text" name="qrySDate">
+            </div>
+          </td>
         </tr>
         <tr>
           <td>中文姓名</td>
@@ -63,15 +65,15 @@
         </tr>
         <tr>
           <td>出生日期</td>
-          <td><div class="duration">起<input type="date"> 迄<input type="date"></div></td>
+          <td><div class="duration">起<input type="date"> 訖<input type="date"></div></td>
         </tr>
         <tr>
           <td>性別</td>
           <td>
             <div class="optionGroup">
-              <label class="checked"><input type="radio">全部</label>
-              <label><input type="radio">男</label>
-              <label><input type="radio">女</label>
+              <label class="checked"><input id="aaa" type="radio">全部</label>
+              <label><input id="aaa" type="radio">男</label>
+              <label><input id="aaa" type="radio">女</label>
             </div>
           </td>
         </tr>
@@ -99,9 +101,9 @@
           <td>最近一次入出境狀態</td>
           <td>
             <div class="optionGroup">
-              <label class="checked"><input type="radio">入出境</label>
-              <label><input type="radio">入境</label>
-              <label><input type="radio">出境</label>
+              <label class="checked"><input  id="bbb" type="radio">入出境</label>
+              <label><input  id="bbb" type="radio">入境</label>
+              <label><input  id="bbb" type="radio">出境</label>
             </div>
           </td>
         </tr>
@@ -113,6 +115,7 @@
       </div>
     </form>
   </section>
+
   
 </body>
 </html>

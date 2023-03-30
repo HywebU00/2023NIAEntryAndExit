@@ -1,7 +1,7 @@
 // 顏色變數 ////////////////////////////
 $disabledColor: gray;
-$inputBg: white;
-$focused: #c00;
+$inputBg: #ADB8CC;
+$focused: $hilight;
 
 // 表單元件基本樣式 ////////////////////////////////////////////////
 form {margin: 0;padding: 0;}
@@ -27,12 +27,14 @@ input, textarea, select, button, datalist, label {
   height: 2.8em; line-height: 2.8;
   padding: 0 .8em; margin: 3px;
   vertical-align: middle;
-  border: 1px solid $borderColorDim;
+  // border: 1px solid $borderColorDim;
+  border: none;
   background-color: $inputBg;
   border-radius: 8px;
+  transition: .2s;
 
-  &:hover{border-color: $focused;}
-  &:focus{border-color: $focused; box-shadow: $focused 0 0 0 1px;}
+  &:hover,
+  &:focus{box-shadow: $focused 0 0 0 3px;}
 }
 
 // 下拉選單樣式 ////////////////////////////
