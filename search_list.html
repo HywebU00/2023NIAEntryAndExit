@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>移民署入出境紀錄查詢系統</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <hgroup>
+      <img class="logo" src="images/logo.png" alt="logo">
+      <img class="title" src="images/h1.svg" alt="內政部移民署"></img>
+      <h1>旅客入出境紀錄查詢</h1>
+    </hgroup>
+
+    <section class="loginInfo">
+      <ul>
+        <li>移民資訊組系統設計科 10001 測試帳號</li>
+        <li><time>20230303</time><time>18:07:33</time></li>
+      </ul>
+      <ul>
+        <li>202303030901.r0</li>
+        <li>雲端正式環境</li>
+        <li>WS:0(7001)桃園二期航站F110001</li>
+      </ul>
+      </section>
+  </header>
+
+  <h2>查詢結果</h2>
+
+
+  <section class="list">
+    <table>
+      <thead>
+        <tr>
+          <th>項次</th>
+          <th>旅客識別碼</th>
+          <th>姓名</th>
+          <th>英文姓名</th>
+          <th>身分證號</th>
+          <th>性別</th>
+          <th>出生日期</th>
+          <th>國籍</th>
+          <th>護照號碼</th>
+          <th>異動主機</th>
+          <th>異動時間</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="now">
+          <td>1</td>
+          <td>0300001787</td>
+          <td></td>
+          <td>FANJIANG DA-MING</td>
+          <td></td>
+          <td>男</td>
+          <td>20000101</td>
+          <td>韓國</td>
+          <td>KRTEST</td>
+          <td>C4</td>
+          <td><time>20230325</time> <time>09:37:46</time></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>0300039041</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>日本</td>
+          <td>KRTEST</td>
+          <td>C4</td>
+          <td><time>20230331</time> <time>10:19:46</time></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="page">
+    <button class="first disabled" type="button"></button>
+    <button class="prev disabled" type="button"></button>
+    <ul class="pageNumbers">
+      <li class="now"><a href="#">1</a></li>
+      <!-- <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#">6</a></li>
+      <li><a href="#">7</a></li>
+      <li><a href="#">8</a></li>
+      <li><a href="#">9</a></li>
+      <li><a href="#">10</a></li> -->
+    </ul>
+    <button class="next disabled" type="button"></button>
+    <button class="last disabled" type="button"></button>
+  </section>
+
+  <div class="btnGroup">
+    <div class="left">
+      <span class="button detail"><a href="detail.html">ENTER 詳細</a></span>
+    </div>
+
+    <div class="right">
+      <span class="button"><a href="#">F3 回查詢頁</a></span>
+      <span class="button"><a href="#">F12 返回</a></span>
+    </div>
+  </div>
+
+</body>
+
+</html>

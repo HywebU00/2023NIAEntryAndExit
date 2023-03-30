@@ -46,8 +46,8 @@
           <td>入出境日期</td>
           <td>
             <div class="duration"><!-- 起訖 -->
-              <input type="text" name="qrySDate" class="form-control">
-              <input type="text" name="qrySDate">
+              <input type="text" placeholder="起" name="qrySDate" class="form-control">
+              <input type="text" placeholder="訖" name="qrySDate">
             </div>
           </td>
         </tr>
@@ -65,7 +65,12 @@
         </tr>
         <tr>
           <td>出生日期</td>
-          <td><div class="duration">起<input type="date"> 訖<input type="date"></div></td>
+          <td>
+            <div class="duration">
+              <input type="text" placeholder="起" value="2000/12/31" name="qrySDate" class="form-control">
+              <input type="text" placeholder="訖" name="qrySDate">
+            </div>
+          </td>
         </tr>
         <tr>
           <td>性別</td>
@@ -110,7 +115,7 @@
       </table>
 
       <div class="btnDv">
-        <input type="submit" value="Enter 確定">
+        <input class="enter" type="submit" value="確定送出">
         <span class="button"><a href="#">F12 返回</a></span>
       </div>
     </form>

@@ -43,14 +43,14 @@ $numberBgHover:#3F5073;
     cursor: pointer; transition: .2s;
     &:hover, &:focus{ background: $numberBgHover;}
     &::after{
-      content: ''; position: absolute; top: calc(50% - 5px);
-      width: 10px;height: 10px; transform: rotate(45deg);
+      content: ''; position: absolute; top: calc(50% - 6px);
+      width: 12px;height: 12px; transform: rotate(45deg);
       border: 2px solid $fontColor; border-top: none; border-right: none;
     }
     &.first, &.last{
       &::before{
-        content: ''; position: absolute; top: calc(50% - 7px);
-        width: 2px; height: 14px; background-color: $fontColor;
+        content: ''; position: absolute; top: calc(50% - 8px);
+        width: 2px; height: 16px; background-color: $fontColor;
       }
     }
     &.next, &.last{
@@ -66,11 +66,17 @@ $numberBgHover:#3F5073;
       &::after{left: calc(50% - 2px);}
     }
     &.last{
-      &::before {left: calc(50% + 8px);}
+      &::before {left: calc(50% + 9px);}
       &::after{left: calc(50% - 8px);}
     }
     &.next{
       &::after{left: calc(50% - 6px);}
+    }
+
+    &.disabled{
+      background: none;
+      &::before { background-color: $disabledColor;}
+      &::after{border-color: $disabledColor;}
     }
   }
 }
