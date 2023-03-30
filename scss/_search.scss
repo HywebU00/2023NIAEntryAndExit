@@ -17,7 +17,7 @@ table.formLayout{
   td{
     padding: 10px 16px;
     &:nth-child(odd) {
-      text-align: right;width: 11em; font-weight: 400;
+      text-align: right;width: 11.5em; font-weight: 400;
       background: $thBg; color: $thColor;
       border-bottom: 1px solid $borderColor;
     }
