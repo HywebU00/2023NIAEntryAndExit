@@ -1,4 +1,4 @@
-// 單元標題
+// 單元標題 ////////////////////////////////////////
 h2 {
   margin: 0 auto 24px;
   font-size:  2em;font-weight: 600; text-align: center; line-height: 1.2;
@@ -11,6 +11,17 @@ h2 {
   }
 }
 
+
+// btnGroup ////////////////////////////////////////
+.btnGroup{
+  @extend %mainWidth; margin-top: 20px; margin-bottom: 60px;
+  display: flex; flex-flow: row wrap;
+  .left, .right{
+    flex: 1 1 auto; display: flex; flex-flow: row wrap;
+  }
+  .left{ justify-content: flex-start; }
+  .right{ justify-content: flex-end; display: flex; flex-flow: row wrap; }
+}
 
 // button
 button.funcBtn, .button{
@@ -57,27 +68,14 @@ button.funcBtn{
   }
 }
 
-.btnGroup{
-  @extend %mainWidth; margin-top: 20px; margin-bottom: 60px;
-  display: flex; flex-flow: row wrap;
-  .left, .right{
-    flex: 1 1 auto;
-    display: flex; flex-flow: row wrap;
-    // outline: 1px solid red;
-  }
-  
-  .left{
-    justify-content: flex-start;
-  }
-  
-  .right{
-     justify-content: flex-end;
-     display: flex; flex-flow: row wrap;
-  }
-}
 
 
-// 表單送出、確定等 button
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
+// 表單下方的 buttons，送出、確定等 button
 .btnDv{
   text-align: center;
   margin: 25px 0 50px;
@@ -98,3 +96,57 @@ button.funcBtn{
   }
 
 }
+
+
+// 起迄日期區間 ////////////////////////////////////////
+.duration{
+  position: relative;
+  display: flex; align-items: center;
+  &::after{
+    content: '~';text-align: center;
+    position: absolute; width: 1.2em; left: calc(50% - .6em);
+  }
+  input{
+    flex: 0 0 calc(50% - .8em); 
+    padding-right: 48px;
+    &:first-child{
+      margin-right: 1.6em;
+      & + .icon_calendar{right: calc(50% + 12px + .6em)}
+    }
+    & ~ input{ 
+      & + .icon_calendar {right: 10px;}
+    }
+  }
+
+  .icon_calendar{
+    content: ''; position: absolute; left: auto;
+    flex: none;
+    width: 24px;height: 24px;
+    background: url(../images/icon_calendar.svg) no-repeat 0 0;
+    background-size: 100% auto;
+  }
+}
+
+// 多選或單選項目組 ////////////////////////////////////////
+.optionGroup{
+  display: flex;
+
+  &>label{
+    flex: 0 0 8em;
+    height: 2.1em; line-height: 2.1; padding: 0 .8em; margin: 0;
+    border-radius: 8px; text-align: center;
+    box-shadow: transparent 0 0 0 1px inset; transition: .2s;
+    &+label{margin-left: 4px;}
+    input{ opacity: 0; font-size: 0; margin: 0; }
+    &:hover, &:focus{
+      box-shadow: $inputBg 0 0 0 1px inset;
+    }
+
+    &.checked{
+      background: $inputBg; color: $fontInvert;
+    }
+  }
+
+}
+
+

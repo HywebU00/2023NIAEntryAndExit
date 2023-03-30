@@ -1,14 +1,9 @@
-
-
-
 .search{
   @extend %mainWidth;
-
 }
 
-
+// 表單排版表格
 table.formLayout{
-  // outline: 1px dashed #f66;
   border-collapse: collapse;
   width: 90%; margin: 0 auto;max-width: 900px;
   font-size: 1.125em; line-height: 1.5;
@@ -31,9 +26,6 @@ table.formLayout{
     }
   }
 
-  .duration, .optionGroup{
-    width: 100%;
-  }
 
 }
 
@@ -61,62 +53,3 @@ table.formLayout{
   margin-bottom: 24px;
 
 }
-
-
-
-
-// 表單模組 ////////////////////////////////////////
-// 起迄日期區間
-.duration{
-  position: relative;
-  display: flex; align-items: center;
-  &::after{
-    content: '~';text-align: center;
-    position: absolute; width: 1.2em; left: calc(50% - .6em);
-  }
-  input{
-    flex: 0 0 calc(50% - .8em); margin-right: 1.6em; margin-left: 0;
-    padding-right: 48px;
-    &:first-child{
-      & + .icon_calendar{right: calc(50% + 12px + .6em)}
-    }
-    &:last-of-type{ 
-      margin-right: 0;
-      & + .icon_calendar {right: 10px;}
-    }
-  }
-
-  .icon_calendar{
-    content: ''; position: absolute; left: auto;
-    flex: none;
-    width: 24px;height: 24px;
-    background: url(../images/icon_calendar.svg) no-repeat 0 0;
-    background-size: 100% auto;
-  }
-}
-
-// 多選或單選項目組
-.optionGroup{
-  // outline: 1px dashed #9f3;
-  display: flex;
-
-  &>label{
-    flex: 0 0 8em;
-    height: 2.1em; line-height: 2.1; padding: 0 .8em; margin: 0;
-    border-radius: 8px; text-align: center;
-    box-shadow: transparent 0 0 0 1px inset; transition: .2s;
-    &+label{margin-left: 4px;}
-    input{ opacity: 0; font-size: 0; margin: 0; }
-    &:hover, &:focus{
-      box-shadow: $inputBg 0 0 0 1px inset;
-    }
-
-    &.checked{
-      background: $inputBg; color: $fontInvert;
-      // &:hover, &:focus{ box-shadow: $inputBg 0 0 0 1px;}
-    }
-  
-  }
-
-}
-
