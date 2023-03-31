@@ -41,7 +41,8 @@ $numberBgHover:#3F5073;
     font-size: inherit;
     border: none; background: none; outline: none;
     cursor: pointer; transition: .2s;
-    &:hover, &:focus{ background: $numberBgHover;}
+    &:hover { background: $numberBgHover; box-shadow: none;}
+    &:focus{ background: $numberBgHover; box-shadow: $numberBgHover 0 0 0 3px;}
     &::after{
       content: ''; position: absolute; top: calc(50% - 6px);
       width: 12px;height: 12px; transform: rotate(45deg);
@@ -66,11 +67,11 @@ $numberBgHover:#3F5073;
       &::after{left: calc(50% - 2px);}
     }
     &.last{
-      &::before {left: calc(50% + 9px);}
-      &::after{left: calc(50% - 8px);}
+      &::before {left: calc(50% + 7px);}
+      &::after{left: calc(50% - 11px);}
     }
     &.next{
-      &::after{left: calc(50% - 6px);}
+      &::after{left: calc(50% - 8px);}
     }
 
     &.disabled{
