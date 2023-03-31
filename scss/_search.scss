@@ -51,9 +51,42 @@ table.formLayout{
     }
   }
   margin-bottom: 24px;
-
 }
 
+.searchMode{
+  display: flex; justify-content: flex-end;
+  align-items: center;
+  margin: .6em 0 0;
+  .label{ height: 2em; margin-right: .5em; line-height: 2;}
+  .switch{
+    background-color: $thBg; padding: 4px; border-radius: 2em;
+    label{
+      position: relative; 
+      height: 2em; line-height: 2; padding: 0 12px 0 26px; border-radius: 2em;
+      color: $fontColorDim2;
+      cursor: pointer;
+      input{ 
+        position: absolute; left: 8px; top: 13px;
+        font-size: 11px; margin: 0 5px 0 0; 
+        border: none;
+        box-shadow: $fontColorDim 0 0 0 1px;
+        &:checked{
+          background: $hilight;
+          box-shadow: $fontInvert 0 0 0 2px;
+        }
+      }
+      &.checked{
+        font-weight: 500; cursor: default;
+        background-color: $fontColor; color: $fontInvert; 
+        input{
+          background: $hilight;
+          box-shadow: $fontInvert 0 0 0 2px;
+        }
+      }
+    }
+  }
+
+}
 
 //
 .ReasonAndPurpose{

@@ -30,15 +30,15 @@
       </section>
   </header>
 
-  <h2>查詢模式</h2>
+  <h2>旅客入出境紀錄查詢</h2>
 
   
   <section class="search">
 
-    <div class="modeSwitch">
+    <!-- <div class="modeSwitch">
       <button class="button now">精準</button>
       <button class="button">模糊(英文姓名與中文姓名)</button>
-    </div>
+    </div> -->
 
     <form action="">
       <table class="formLayout">
@@ -46,10 +46,20 @@
           <td>入出境日期</td>
           <td>
             <div class="duration">
-              <input type="text" placeholder="起" name="qrySDate" class="form-control">
-              <span class="icon_calendar"></span>
+              <input type="text" placeholder="起" name="qrySDate">
               <input type="text" placeholder="訖" name="qrySDate">
-              <span class="icon_calendar"></span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <div class="searchMode">
+              <span class="label">英文與中文姓名查詢模式</span >
+              <div class="switch">
+                <label class="checked"><input type="radio" name="searchMode"> 精準</label>
+                <label><input type="radio" name="searchMode">模糊</label>
+              </div>        
             </div>
           </td>
         </tr>
@@ -69,10 +79,8 @@
           <td>出生日期</td>
           <td>
             <div class="duration">
-              <input type="text" placeholder="起" name="qrySDate" class="form-control">
-              <span class="icon_calendar"></span>
+              <input type="text" placeholder="起" name="qrySDate">
               <input type="text" placeholder="訖" name="qrySDate">
-              <span class="icon_calendar"></span>
             </div>
           </td>
         </tr>
@@ -80,9 +88,9 @@
           <td>性別</td>
           <td>
             <div class="optionGroup">
-              <label class="checked"><input id="aaa" type="radio">全部</label>
-              <label><input id="aaa" type="radio">男</label>
-              <label><input id="aaa" type="radio">女</label>
+              <label class="checked"><input name="aaa" type="radio">全部</label>
+              <label><input name="aaa" type="radio">男</label>
+              <label><input name="aaa" type="radio">女</label>
             </div>
           </td>
         </tr>
@@ -110,9 +118,9 @@
           <td>最近一次入出境狀態</td>
           <td>
             <div class="optionGroup">
-              <label class="checked"><input  id="bbb" type="radio">入出境</label>
-              <label><input  id="bbb" type="radio">入境</label>
-              <label><input  id="bbb" type="radio">出境</label>
+              <label class="checked"><input  name="bbb" type="radio">入出境</label>
+              <label><input  name="bbb" type="radio">入境</label>
+              <label><input  name="bbb" type="radio">出境</label>
             </div>
           </td>
         </tr>
