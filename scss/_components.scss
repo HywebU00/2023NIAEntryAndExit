@@ -16,15 +16,17 @@ h3{
 }
 
 
-// btnGroup ////////////////////////////////////////
+// btnGroup 按鈕群 ////////////////////////////////////////
 .btnGroup{
-  @extend %mainWidth; margin-top: 20px; margin-bottom: 60px;
+  @extend %mainWidth; margin-top: 20px; margin-bottom: 40px;
   display: flex; flex-flow: row wrap;
-  .left, .right{
+  .left, .right, .center{
     flex: 1 1 auto; display: flex; flex-flow: row wrap;
+    display: flex; flex-flow: row wrap;
   }
   .left{ justify-content: flex-start; }
-  .right{ justify-content: flex-end; display: flex; flex-flow: row wrap; }
+  .right{ justify-content: flex-end;}
+  .center{ justify-content: center;}
 }
 
 // button
@@ -39,7 +41,7 @@ button.funcBtn, .button{
 // <button>元件
 button.funcBtn{
   border: none; outline: none;
-  height: 3em; padding: 0 1.5em; border-radius: 2em;margin: 4px;
+  height: 3em; padding: 0 1.5em; border-radius: 2em;margin: 4px; min-width: 7em;
   background: $btnBg1;color: $btnColor;
   transition: .2s;
   &:hover, &:focus{box-shadow: $btnBg1Hover 0 0 0 2px; background: $btnBg1Hover;}
@@ -55,19 +57,23 @@ button.funcBtn{
     transition: .2s;
     &:hover, &:focus{box-shadow: $btnBg2Hover 0 0 0 2px;background: $btnBg2Hover;}
   }
-  &.detail{
+  &.detail, &.style1{
     a{
       background-color: $btnBg3;
       &:hover, &:focus{box-shadow: $btnBg3Hover 0 0 0 2px;background: $btnBg3Hover;}
+    }
+    &:only-child{
+      width: 90%; max-width: 460px;
+    }
+  }
+  &.detail{
+    a{
       &::before{
         content: ''; display: inline-block;width: 18px;height: 18px;
         vertical-align: middle; margin-right: 8px;
         background: url(../images/icon_search.svg) no-repeat center center;
         background-size: 100% auto;
-      }
-    }
-    &:only-child{
-      width: 90%; max-width: 470px;
+      }      
     }
   }
 }

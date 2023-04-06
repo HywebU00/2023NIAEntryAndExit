@@ -5,12 +5,29 @@ $numberBgHover:#3F5073;
 
 .page{
   @extend %mainWidth; margin-top: 24px;
-  display: flex; flex-flow: row wrap;justify-content: center;
+  display: flex; flex-flow: row wrap;justify-content: space-between;
   text-align: center; font-weight: 600; font-size: 1.125rem;
+  position: relative;
 
-  // outline: 1px dashed #fff3;
+  // outline: 1px dashed #fff9;
   ul{list-style: none; margin: 0; padding: 0;}
 
+  .pageGo{
+    flex: 1 1 70%;
+    display: flex; flex-flow: row wrap;justify-content: center;
+  }
+
+  // 共 n 筆
+  .total{
+    flex: 0 1 auto; min-width: 5em;
+    line-height: 2.8; height: 2.7em; text-align: left;margin: 3px 0;
+    em{
+      display: inline-block; margin: 0 .1em; line-height: 1;
+      font-size: 1.33em; font-style: normal; color: $secondary;
+    }
+  }
+
+  // 頁碼
   .pageNumbers{
     line-height: 1.1;
     display: flex; flex-flow: row nowrap;
@@ -75,9 +92,11 @@ $numberBgHover:#3F5073;
     }
 
     &.disabled{
-      background: none;
+      background: none; box-shadow: none;
       &::before { background-color: $disabledColor;}
       &::after{border-color: $disabledColor;}
     }
   }
 }
+
+.btnGroup + .page{ margin-top: -30px;}

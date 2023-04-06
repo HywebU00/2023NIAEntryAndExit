@@ -2,37 +2,8 @@
   @extend %mainWidth;
 }
 
-// 表單排版表格
-table.formLayout{
-  border-collapse: collapse;
-  width: 90%; margin: 0 auto;max-width: 900px;
-  font-size: 1.125em; line-height: 1.5;
-  background-color: $tableBg;
-  border-top: 3px solid $borderColor;
-  border-bottom: 3px solid $borderColor;
-  
-  td{
-    padding: 6px 16px;
-    &:nth-child(odd) {
-      text-align: right;width: 11.5em; font-weight: 400;
-      background: $thBg; color: $thColor;
-      border-bottom: 1px solid $borderColor;
-    }
-    &:nth-child(even) {
-      border-bottom: 1px solid $borderColorDim;
-      &>input[type="text"]:only-child{
-        width:100%;
-      }
-    }
-  }
 
-  &+.formLayout {margin-top: 10px;}
-
-
-}
-
-
-// 查詢模式切換 ////////////////////////////////////////
+// on/off 切換 ////////////////////////////////////////
 .modeSwitch{
   display: flex;
   width: 80%; margin: 0 auto;max-width: 900px;
@@ -53,10 +24,10 @@ table.formLayout{
   margin-bottom: 24px;
 }
 
+// 精準、模糊切換
 .searchMode{
-  display: flex; justify-content: flex-end;
-  align-items: center;
-  margin: .6em 0 0;
+  display: flex; justify-content: flex-end; align-items: center;
+  margin: 0 0 6px;
   .label{ height: 2em; margin-right: .5em; line-height: 2;}
   .switch{
     background-color: $thBg; padding: 4px; border-radius: 2em;
@@ -86,13 +57,16 @@ table.formLayout{
     }
   }
 
+  &+input{ width: 100%;}
+
 }
 
-//
+// 查詢事由及用途
 .ReasonAndPurpose{
   @extend %mainWidth;max-width: 800px;
   padding: 45px 40px 50px;
   border-radius: 24px;
+  font-size: 1.125em; line-height: 1.5;
   box-shadow: $borderColorDim 0 0 0 3px;
   background-color: $tableBg;
   input[type="text"], select{

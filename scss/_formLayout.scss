@@ -1,0 +1,28 @@
+// 表單排版表格
+table.formLayout{
+  border-collapse: collapse;
+  width: 90%; margin: 0 auto;max-width: 900px;
+  font-size: 1.125em; line-height: 1.5;
+  background-color: $tableBg;
+  border-top: 3px solid $borderColor;
+  border-bottom: 3px solid $borderColor;
+  
+  td{
+    padding: 6px 16px;
+    &:nth-child(odd) {
+      text-align: right;width: 11.5em; font-weight: 400;
+      vertical-align: top; padding-top: .65em;
+      background: $thBg; color: $thColor;
+      border-bottom: 1px solid $borderColor;
+    }
+    &:nth-child(even) {
+      border-bottom: 1px solid $borderColorDim;
+      &>input[type="text"]:only-child{
+        width:100%;
+      }
+    }
+  }
+
+  &+.formLayout {margin-top: 10px;}
+
+}

@@ -2,6 +2,8 @@
   @extend %mainWidth; margin: 0 auto;
   font-size: 1.125rem;
 
+  &+.details{ margin-top: 3.5em;}
+
   .whichRecord{
     margin: 24px auto;
     line-height: 1.1;text-align: center; color: $hilight;
@@ -37,5 +39,9 @@
     border-bottom: 1px solid $borderColorDim;
     &[colspan="3"]{ width: 55.33%;}
     &[colspan="5"]{ width: 88.66%;}
+  }
+
+  .page{
+    width: 100%;
   }
 }
