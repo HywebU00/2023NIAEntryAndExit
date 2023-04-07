@@ -4,16 +4,17 @@
 
   // 旅客相片
   .photo{
-    flex: 0 0 160px; width: 160px; 
+    flex: 0 0 126px; width: 126px;
     img{
-      display: block; width: 160px; height: 160px; object-fit: contain;
+      display: block; width: 126px; height: 162px; object-fit: contain;
       border-radius: 16px;
+      background-color: #fff;
     }
   }
 
   // basicInfo： 中、英文姓名，護照號碼，國籍等
   .basicInfo{
-    position: relative; width: calc(100% - 180px);font-size: 1.125rem;
+    position: relative; width: calc(100% - 142px);font-size: 1.125rem;
     border-radius: 16px; padding: 8px 0; padding: 5px;
     border: 2px solid $borderColorDim; border-left: none; border-right: none;
     dl{
