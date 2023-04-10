@@ -113,12 +113,11 @@
     width: 100%;
   }
 
-  p{
-    &.answer{
-      text-align: center; margin:1.2em 0;
-      font-size: 1.5rem; color: $hilight; font-weight: bold;
-    }
+  .answer{
+    text-align: center; margin:1.2em 0;
+    font-size: 2rem; color: $hilight; font-weight: bold;
   }
+
 }
 
 // 查詢條件
