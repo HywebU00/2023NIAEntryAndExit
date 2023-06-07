@@ -1,5 +1,5 @@
 .header{
-  @extend %mainWidth; margin-top: 30px; margin-bottom: 60px;
+  @extend %mainWidth; padding-top: 30px; margin-bottom: 60px;
   display: flex;flex-flow:row wrap; align-items: flex-start;
 
   hgroup{

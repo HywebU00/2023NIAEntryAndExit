@@ -29,10 +29,12 @@ h3{
   .center{ justify-content: center;}
 }
 
-// button
+
+////////////////////////////////////////////////////////////////////////////////////
+
+// button //////////////////////////////////////////////////////////////////////////
 button.funcBtn, .button{
   font-size: 1.25rem; font-weight: 600;
-
   @media screen and (max-width: 1200px){
     font-size: 1rem;
   } 
@@ -40,7 +42,7 @@ button.funcBtn, .button{
 
 // <button>元件
 button.funcBtn{
-  border: none; outline: none;
+  border: none; outline: none; white-space: nowrap;
   height: 3em; padding: 0 1.5em; border-radius: 2em;margin: 4px; min-width: 7em;
   background: $btnBg1;color: $btnColor;
   transition: .2s;
