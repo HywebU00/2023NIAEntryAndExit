@@ -1,28 +1,104 @@
 // 表單排版表格
 table.formLayout{
   border-collapse: collapse;
-  width: 90%; margin: 0 auto;max-width: 900px;
+  width: 100%; margin: 0 auto;
   font-size: 1.125em; line-height: 1.5;
-  background-color: $tableBg;
-  border-top: 3px solid $borderColor;
-  border-bottom: 3px solid $borderColor;
   
   td{
-    padding: 6px 16px;
+    padding: 6px;
     &:nth-child(odd) {
-      text-align: right;width: 11.5em; font-weight: 400;
+      text-align: right; font-weight: 400;
       vertical-align: top; padding-top: .65em;
-      background: $thBg; color: $thColor;
-      border-bottom: 1px solid $borderColor;
+      color: $thColor2;
+
+      // 有警示符號
+      &.warning{
+        color: $hilight;
+        &::before{
+          content: ''; display: inline-block; width: 1.15em; height: 1.15em;
+          margin-right: 4px; vertical-align: middle;
+          background: url(../images/icon_warning.svg) no-repeat center center;
+          background-size: 100% auto;
+    
+        }
+      }
     }
     &:nth-child(even) {
-      border-bottom: 1px solid $borderColorDim;
-      &>input[type="text"]:only-child{
-        width:100%;
-      }
+      color: $fontColor;
+      &>input[type="text"]:only-child{width: 100%;}
+      // &>.asInput:only-child{width: calc(100% - 12px);}
     }
   }
 
   &+.formLayout {margin-top: 10px;}
 
+
+
 }
+
+.search table.formLayout{
+  width: 90%; max-width: 900px;
+  background-color: $tableBg;
+  border-top: 3px solid $borderColor;
+  border-bottom: 3px solid $borderColor;
+  td{
+    padding-left: 16px; padding-right: 16px;
+    &:nth-child(odd) {
+      width: 11.5em;
+      background: $thBg; color: $thColor;
+      border-bottom: 1px solid $borderColor;
+    }
+    &:nth-child(even) {
+      border-bottom: 1px solid $borderColorDim;
+    }
+  }
+
+}
+
+
+// 提示文字 ////////////////////////////////////////
+.notice{
+  position: relative;
+  display: inline-block; margin: 0 0 0 .5em;
+
+  &.check , &.warning, &.error {
+    padding-left: 1.4em; 
+    &::before{
+      position: absolute; left: 0; top: .15em;
+      content: ''; width: 1.25rem; height: 1.25rem; 
+    }
+  }
+
+  &.check{
+    color: $secondary;
+    &::before{
+      background: $secondary url(../images/icon_check.svg) no-repeat center center;
+      background-size: 70% 85%;
+      border-radius: 50%;
+    }
+  }
+  &.warning{
+    color: $hilight;
+    &::before{
+      background: url(../images/icon_warning.svg) no-repeat center center;
+      background-size: 100% auto;
+    }
+  }
+  &.error{
+    color: $hilight;
+    &::before{
+      background: url(../images/icon_error.svg) no-repeat center center;
+      background-size: 100% auto;
+      border-radius: 50%;
+    }
+  }
+
+}
+
+.markSet{
+  display: flex; align-items: center; width: 100%;
+  input[type="text"]{ flex: 1 1 50%; margin-right: 8px;}
+  .button{ margin-bottom: 0;}
+  p.note{ margin-left: 4px;}
+}
+.meta td .markSet{ margin-top: -.35em;}

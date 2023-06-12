@@ -1,0 +1,288 @@
+.entryInspection{
+
+  width: 96%; margin: 0 auto;
+  display: flex;
+
+
+  .textData{
+    flex:0 0 49%; margin-right: 2%; padding-bottom: 12px;
+    border-top: 3px solid $borderColor;
+    border-bottom: 3px solid $borderColor;
+  }
+  .imageData{flex: 0 0 49%;}
+  
+
+  ////////////////////////////////////////////////////////////////////////////////////
+  .textData{
+
+    // 上方 「入國登記表」、「入境證號」
+    .meta{ 
+      border: none;
+      th{width: 6em;}
+
+
+      &~.formLayout{
+        position: relative; margin-top: 20px;
+        &::before{
+          content: ''; display: block; position: absolute;
+          top: -14px; left: 0; right: 0; height: 3px;
+          background-color: $borderColor;
+        }
+      }
+    }
+
+    // 表單排版表格
+    .formLayout{
+      width: 100%;
+      td{
+        &:nth-child(odd){ width: 6em;}
+        &:nth-child(even){ width: calc(50% - 8em);}
+        &[colspan="3"]{ width: calc(100% - 8em);}
+
+        &.longText{
+          position: relative;
+          &::before{
+            content: attr(title); position: absolute; left: 4em; top: 1.6em;
+            padding:.4em .6em; z-index: 3;
+            width: auto; white-space: nowrap;
+            border-radius: $radiusM; background: $hilight; color: $fontInvert;
+            box-shadow: rgba(0,0,0,.4) 0 2px 10px;
+            opacity: 0; height: 0; transition: .3s;
+          }
+          &:hover{
+            &::before{opacity: 1; height: 2.1em;}
+          }
+        }
+
+        .ListInCell{ color: $secondary;}
+      }
+    }
+
+
+    // 中間的一列 buttons
+    .linkButtons {
+      display: flex; padding: 4px; margin: 6px auto 0;
+      .button {
+        flex: 1 1 auto; width: auto; margin: 0 3px; font-size: 1.125rem;
+        &>a{padding: 0 .5em;}
+      }
+
+      & + .formLayout{
+          margin-top: 0;
+        &::before {display: none;}
+      }
+    }
+    
+  
+  }
+
+
+  
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////
+// 照片和指紋
+.biometrics{
+  display: flex; justify-content: space-between;
+  font-size: 1.25em;
+  .takePhoto{flex: 1 1 64%; margin-right: 12px; min-width: 444px;}
+  .getFingerprinted{flex: 1 1 42%; min-width: 288px;}
+  .funcBtn{ 
+    width: calc(100% - 10px); margin: 0 5px 5px;
+    background-color: $btnBg1;
+    &:hover, &:focus{
+      background-color: $btnBg1Hover;
+      box-shadow: $btnBg1Hover 0 0 0 2px;
+    }
+  }
+
+  // 三張照片 //////////////
+  .idPhotos{
+    display: flex; justify-content: center;
+    margin: 4px auto 0;
+    figure{
+      flex: 0 0 140px; margin: 0 4px;
+      img{
+        display: block; width: 140px; height: 180px; object-fit: contain;
+        background-color: $thBg;border-radius: $radiusL;
+      }
+  
+      &.matched{
+        position: relative; 
+        img{
+          box-shadow: $secondary 0 0 0 3px;
+        }
+        &::after{
+          content: attr(title);
+          position: absolute; left: 0; right: 0; bottom: -1px;
+          padding: 4px 8px 2px; text-align: center; font-weight: bold;
+          border-radius: 0 0 $radiusL $radiusL;
+          background-color: transparentize($secondary, .15); color: $fontInvert;
+        }
+      }
+  
+      &.notMatched{
+        position: relative;
+        &::before{
+          content: ''; position: absolute; left: 0;right: 0;bottom: 0;
+          height: 180px;
+          border-radius: $radiusL;
+          background-color: transparentize($hilight, .3);  
+        }
+        &::after{
+          content: attr(title);
+          position: absolute; left: 0; right: 0;top: 50%;;
+          padding: 6px; text-align: center; font-weight: bold;
+          color: $fontInvert;
+        }
+      }
+    }
+    figcaption{
+      display: block; width: 100%;margin: 0 auto 4px;
+      text-align: center;
+    }
+  }
+  
+  // 指紋 //////////////
+  .twoFingerprints{
+    display: flex;justify-content: center;
+    margin: 4px auto 8px; 
+  
+    .fingerprint{
+      flex:0 0 140px; position: relative;
+      .caption{
+        display: block; margin: 0 auto 4px;
+         text-align: center; 
+      }
+      img{ display: block;width: 100%; height: 120px;object-fit: cover;border-radius: $radiusL; }
+      select{
+        position: absolute; left: 0; right: 0; bottom: 0; top: auto;
+        height: 1.8em; line-height: 1.8; background-position: right 10px top 14px;
+        border-radius: 0 0 $radiusL $radiusL;
+        background-color: transparentize($secondary, .1);
+        &:focus, &:hover{box-shadow:$secondary 0 0 0 2px;}
+      }
+  
+      &:first-child{ margin-right: 8px;}
+      &.scanned{
+        &::after{
+          content: attr(title); position: absolute; left: 0; right: 0; bottom: 0;
+          padding: 6px; text-align: center; font-weight: bold;
+          border-radius: 0 0 $radiusL $radiusL;
+          background-color: transparentize($secondary, .1); color: $fontInvert;
+        }
+      }
+      &.notMatch{
+        &::before{
+          content: ''; position: absolute; left: 0;right: 0;bottom: 0; height: 120px;
+          border-radius: $radiusL;
+          background-color: transparentize($hilight, .3); color: $fontInvert;
+  
+        }
+        &::after{
+          content: attr(title); position: absolute; left: 0; right: 0; top: 50%;
+          padding: 6px; text-align: center; font-weight: bold;
+          color: $fontInvert;
+        }
+  
+        
+      }
+    }
+  }
+    // 指紋比對結果
+  .comparison{
+    display: flex; align-items: center; 
+    margin: 8px 0; font-size: 1.125rem;
+    ul{
+      flex: 1 1 auto;
+      list-style: none; margin: 0; padding: 0; line-height: 1.3;
+      li{
+        em{ color: $hilight;}
+        & + li{ margin-top: .2em;}
+      }
+    }
+    .button{margin: 0 4px;}
+  }
+}
+
+
+
+////////////////////////////////////////////////////////////////////////////////////
+// 護照查驗
+.passport{
+  margin: 20px auto;
+  &.tabSet{
+    .tabItems{
+      display: flex;
+      border-radius: 2em;
+      background-color: $thBg;
+      &>button{
+        flex:0 0 33.3%; margin: 0;
+        height: 2em; line-height: 2; font-size: 1.25rem; font-weight: 600;
+        background-color: transparent; color: $fontColor;
+        box-shadow: none; transition: .2s;
+        &:hover{ background-color: lighten($thBg, 8%);}
+        &.now{ background-color: $btnBg1; color: $fontInvert;
+          &:hover{ background-color: $secondary}
+        }
+      }
+    }
+    .tabContentGroup{margin: 14px 0 0;}
+  }
+
+  .getPassport{
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto; width: 94%;
+    // outline:1px dashed pink;
+    
+    // 小圖：自然光、紫外光、紅外光
+    .selectImg{
+      flex: 0 0 auto; margin: 0 3% 0 0;
+      button{
+        display: block; line-height: 1; height: auto;
+        margin: 0 0 10px; padding: 0;
+        font-size: 1.125rem;
+        background: none; color: $fontColor; border-radius: 0;
+        box-shadow: none; 
+        &:last-child{margin-bottom: 0;}
+        img{ 
+          display: block; width: 112px; height: 60px; object-fit: cover; 
+          margin: 0 0 6px; transition: .2s;
+        }
+        span{ display: block;}
+
+        &:hover{
+          img{box-shadow: $fontColorDim 0 0 0 2px;}
+        }
+        &:focus img{ box-shadow: $secondary 0 0 0 3px;}
+      }
+    }
+
+    .ppDisplay{
+      flex: 0 0 calc(97% - 118px); max-width: 432px;
+      outline: 1px solid red;
+      img{ display: block; width: 100%; max-height: 288px; object-fit: contain;}
+    }
+
+
+
+    
+  }
+
+  .showImgHere{
+    width: 94%; margin: 0 auto;
+    img{
+      display: block; margin: 0 auto;  border-radius: $radiusL;
+      height: 288px;width: auto; max-width: 100%; object-fit: cover; 
+    }
+    // img w:h = 3:2
+  }
+
+}
+
+
+.imageData .list{
+  border-radius: 0;
+  th{ border-right: 1px solid $tableBg;}
+}

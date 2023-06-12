@@ -15,47 +15,23 @@ h3{
   text-align: center
 }
 
-
-// btnGroup 按鈕群 ////////////////////////////////////////
-.btnGroup{
-  @extend %mainWidth; margin-top: 20px; margin-bottom: 40px;
-  display: flex; flex-flow: row wrap;
-  .left, .right, .center{
-    flex: 1 1 auto; display: flex; flex-flow: row wrap;
-    display: flex; flex-flow: row wrap;
-  }
-  .left{ justify-content: flex-start; }
-  .right{ justify-content: flex-end;}
-  .center{ justify-content: center;}
-}
-
-
 ////////////////////////////////////////////////////////////////////////////////////
-
-// button //////////////////////////////////////////////////////////////////////////
-button.funcBtn, .button{
-  font-size: 1.25rem; font-weight: 600;
-  @media screen and (max-width: 1200px){
-    font-size: 1rem;
-  } 
-}
+// button, 像 button 的 a //////////////////////////////////////////////////////////////////
 
 // <button>元件
 button.funcBtn{
-  border: none; outline: none; white-space: nowrap;
-  height: 3em; padding: 0 1.5em; border-radius: 2em;margin: 4px; min-width: 7em;
-  background: $btnBg1;color: $btnColor;
+  height: 2em; line-height: 2; padding: 0 .8em; border-radius: 2em; margin: 4px;
+  border: none; outline: none; white-space: nowrap; font-weight: bold;
   transition: .2s;
-  &:hover, &:focus{box-shadow: $btnBg1Hover 0 0 0 2px; background: $btnBg1Hover;}
 }
 
-// 連結 button
+// 像 button 的 a 連結 （大圓角按鈕）
 .button {
   display: inline-block; margin: 4px;
   a{
-    display: block; text-decoration: none; text-align: center;
+    display: block; text-decoration: none; text-align: center; font-weight: bold;
     background: $btnBg2; color: $btnColor;
-    height: 3em; line-height: 3; padding: 0 1.5em; border-radius: 2em;
+    height: 2em; line-height: 2; padding: 0 .8em; border-radius: 2em;
     transition: .2s;
     &:hover, &:focus{box-shadow: $btnBg2Hover 0 0 0 2px;background: $btnBg2Hover;}
   }
@@ -80,6 +56,56 @@ button.funcBtn{
   }
 }
 
+
+// btnGroup 頁面下方按鈕群 ////////////////////////////////////////
+.btnGroup{
+  @extend %mainWidth; padding: 24px 0 40px;
+  display: flex; flex-flow: row wrap;
+  .left, .right, .center{
+    flex: 1 1 auto; display: flex; flex-flow: row wrap;
+    display: flex; flex-flow: row wrap;
+  }
+  .left{ justify-content: flex-start; }
+  .right{ justify-content: flex-end;}
+  .center{ justify-content: center;}
+
+  // button & a
+  button, .button{
+    font-size: 1.25rem; font-weight: 600;
+    @media screen and (max-width: 1200px){
+      font-size: 1rem;
+    } 
+  }
+  button, .button>a{
+    height: 3em; line-height: 3;
+    min-width: 7em; padding: 0 1.5em;
+  }
+  button{
+    &:hover, &:focus{box-shadow: $btnBg2Hover 0 0 0 2px;background: $btnBg2Hover;}
+
+    // 綠色的
+    &.style1{
+      background-color: $btnBg3;
+      &:hover, &:focus{box-shadow: $btnBg3Hover 0 0 0 2px;background: $btnBg3Hover;}
+    }
+
+    // 藍色的
+    &.funcBtn{
+      background: $btnBg1;color: $btnColor; 
+      &:hover, &:focus{box-shadow: $btnBg1Hover 0 0 0 2px; background: $btnBg1Hover;}
+    }
+
+    &.icon_check{
+      &::before{
+        content: ''; display: inline-block; width: 1em; height: 1em;
+        vertical-align: middle; margin-right: 8px;
+        background:url(../images/icon_check.svg) no-repeat center center;
+        background-size: 100% auto;
+      }
+    }
+
+  }
+}
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -128,7 +154,6 @@ button.funcBtn{
       margin-right: 1.6em;
     }
   }
-
 }
 
 // 多選或單選項目組 ////////////////////////////////////////
@@ -153,4 +178,23 @@ button.funcBtn{
 
 }
 
+// 表格 td 內的項目 ol, ul ////////////////////////////////////////
+.ListInCell{
+  list-style: none; margin:.4em 0; padding: 0;
+  line-height: 1.4;
+  li + li{ margin-top: .2em;}
+}
 
+// 表單模組 ////////////////////////////////////////
+// 停留天數
+.stayingDays{
+  width: 100%;
+  display: flex; flex-flow: row wrap;
+
+  input[type="text"]{
+    flex: 1 0 20%; width: 2em; 
+    min-width: 0; margin-left: 0; margin-right: 0;
+  }
+  select{ flex: 1 1 40%; width: auto; margin: 0 5px; }
+
+}

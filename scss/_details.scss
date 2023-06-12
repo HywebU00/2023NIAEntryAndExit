@@ -1,6 +1,27 @@
+table.meta{
+  width: 100%; border-collapse: collapse;
+  font-size: 1.125rem; line-height: 1.5; 
+  border-width: 3px 0; border-style: solid; border-color: $borderColor;
+
+  &+.meta{ margin-top: -3px;}
+
+  caption{
+    text-align: center; font-size: 1.5rem;
+    padding: 10px 0; margin: 0;
+  }
+  & + .meta caption{ margin-top: 30px;}
+
+  th, td{
+    padding: .6em .4em .5em;vertical-align: top;font-weight: 400;
+  }
+  th{
+    text-align: right; color: $thColor2;
+  }
+
+}
+
 .details{
   @extend %mainWidth; margin: 0 auto;
-  font-size: 1.125rem;
 
   &+.details{ margin-top: 3.5em;}
 
@@ -11,35 +32,20 @@
   }
 
   table.meta{
-    width: 100%; border-collapse: collapse;
-    border-width: 3px 0; border-style: solid; border-color: $borderColor;
-    line-height: 1.5; 
     background-color: $tableBg; color: $fontColor;
-
-    &+.meta{ margin-top: -3px;}
-
-    caption{
-      text-align: center; font-size: 1.5rem;
-      padding: 10px 0; margin: 0;
+    th{
+      width: 11.33%; padding-right: .8em; padding-left: .8em;
+      background-color: $thBg; color: $thColor;
+      border-bottom: 1px solid $tableBg;
     }
+    td{
+      width: 22%; padding-left: .8em; padding-right: .8em;
+      border-bottom: 1px solid $borderColorDim;
+      &[colspan="3"]{ width: 55.33%;}
+      &[colspan="5"]{ width: 88.66%;}
+    }
+  }
 
-    & + .meta caption{ margin-top: 30px;}
-  }
-  th, td{
-    padding: .6em .8em .5em;vertical-align: top;font-weight: 400;
-  }
-  th{
-    width: 11.33%;
-    text-align: right;
-    background-color: $thBg; color: $thColor;
-    border-bottom: 1px solid $tableBg;
-  }
-  td{
-    width: 22%;
-    border-bottom: 1px solid $borderColorDim;
-    &[colspan="3"]{ width: 55.33%;}
-    &[colspan="5"]{ width: 88.66%;}
-  }
 
   .page{
     width: 100%;

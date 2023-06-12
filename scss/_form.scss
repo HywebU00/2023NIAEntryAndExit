@@ -28,6 +28,9 @@ input, textarea, select, button, datalist, label {
   &:hover, &:focus{ background-color:$fontColor;}
   &:focus{ box-shadow: $fontColor 0 0 0 2px;}
 }
+.asInput{
+  height: 2.1em; line-height: 2.1;vertical-align: middle; background: #002;
+}
 
 // 下拉選單樣式 ////////////////////////////
 %selectStyle {
@@ -40,8 +43,8 @@ input, textarea, select, button, datalist, label {
   vertical-align: middle;
   border: none;  border-radius: 8px;
   transition: .2s;
-  background: $inputBg url(../images/selectArrow.svg) no-repeat right 6px top .8em;
-  background-size: 24px auto;
+  background: $inputBg url(../images/selectArrow.svg) no-repeat right 10px top .9em;
+  background-size: .8em auto;
   cursor: pointer;
 
   &:hover, &:focus{ background-color:$fontColor;}
@@ -168,7 +171,7 @@ input[disabled],
 input[disabled]:hover,
 input[disabled]:focus {
   background-color: $gray;
-  border-color: $borderColorDim;
+  // border-color: $borderColorDim;
   color: $disabledColor;
   box-shadow: none;
 }
@@ -181,9 +184,9 @@ textarea[readonly]:focus,
 input[type="text"][readonly],
 input[type="text"][readonly]:hover,
 input[type="text"][readonly]:focus {
-  background-color: rgba(255,255,255, .7);
-  border-style: dashed;
-  border-color: $borderColorDim;
+  background-color: $borderColorDim; color: $fontColor;
+  // border-style: dashed;
+  // border-color: $borderColorDim;
   box-shadow: none;
   cursor: default;
 }
