@@ -32,7 +32,6 @@
       border: none;
       th{width: 6em;}
 
-
       &~.formLayout{
         position: relative; margin-top: 24px;
         &::before{
@@ -48,7 +47,9 @@
       width: 100%;
       td{
 
-        &:nth-child(odd){ width: 6em;}
+        &:nth-child(odd){ width: 6em;
+          &.warning{ width: 7em; padding-left: 0;}
+        }
         &:nth-child(even){ width: calc(50% - 8em); padding: 5px 4px 4px;}
         &[colspan="3"]{ width: calc(100% - 8em);}
 
