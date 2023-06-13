@@ -186,7 +186,7 @@ aside.importantMsg{
     background-image: linear-gradient(to top, $thBg 45%, transparent  100%);
     a{
       display: block; text-align: center;
-      width: 72%; margin: 0 auto;
+      width: 72%; margin: 0 auto; padding: 0;
       height: 2.8em; line-height: 2.8; border-radius: 2em;
       background-color: $btnBg2; color: $fontInvert;
       transition: .2s;

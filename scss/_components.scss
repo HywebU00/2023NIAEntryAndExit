@@ -59,7 +59,7 @@ button.funcBtn{
 
 // btnGroup 頁面下方按鈕群 ////////////////////////////////////////
 .btnGroup{
-  @extend %mainWidth; padding: 20px 0 40px;
+  @extend %mainWidth; padding: 24px 0;
   display: flex; flex-flow: row wrap;
   .left, .right, .center{
     flex: 1 1 auto; display: flex; flex-flow: row wrap;
@@ -79,7 +79,7 @@ button.funcBtn{
   }
   button, .button>a{
     height: 3em; line-height: 3;
-    min-width: 7em; padding: 0 1.5em;
+    min-width: 7em; padding: 0 1.2em;
   }
   button{
     &:hover, &:focus{box-shadow: $btnBg2Hover 0 0 0 2px;background: $btnBg2Hover;}
@@ -181,9 +181,9 @@ button.funcBtn{
 
 // 表格 td 內的項目 ol, ul ////////////////////////////////////////
 .ListInCell{
-  list-style: none; margin:.4em 0; padding: 0;
+  list-style: none; margin:.4em 0 0; padding: 0;
   line-height: 1.4;
-  li + li{ margin-top: .2em;}
+  li + li{ margin-top: .15em;}
 }
 
 // 表單模組 ////////////////////////////////////////

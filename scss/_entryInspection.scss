@@ -5,7 +5,7 @@
 
 
   .textData{
-    flex:1 1 49%; margin-right: 2%; padding-bottom: 12px;
+    flex:1 1 49%; margin-right: 2%; padding-bottom: 8px;
     border-top: 3px solid $borderColor;
     border-bottom: 3px solid $borderColor;
   }
@@ -34,7 +34,7 @@
 
 
       &~.formLayout{
-        position: relative; margin-top: 20px;
+        position: relative; margin-top: 24px;
         &::before{
           content: ''; display: block; position: absolute;
           top: -14px; left: 0; right: 0; height: 3px;
@@ -47,8 +47,9 @@
     .formLayout{
       width: 100%;
       td{
+
         &:nth-child(odd){ width: 6em;}
-        &:nth-child(even){ width: calc(50% - 8em);}
+        &:nth-child(even){ width: calc(50% - 8em); padding: 5px 4px 4px;}
         &[colspan="3"]{ width: calc(100% - 8em);}
 
         &.longText{
@@ -73,10 +74,10 @@
 
     // 中間的一列 buttons
     .linkButtons {
-      display: flex; padding: 4px; margin: 6px auto 0;
+      display: flex; padding: 3px; margin: 8px auto 4px;
       .button {
         flex: 1 1 auto; width: auto; margin: 0 3px; font-size: 1.125rem;
-        &>a{padding: 0 .5em;}
+        &>a{padding: 0 .5em; height: 2.1em; line-height: 2.2;}
       }
 
       & + .formLayout{
@@ -101,7 +102,7 @@
   .takePhoto{flex: 1 1 64%; margin-right: 12px; min-width: 444px;}
   .getFingerprinted{flex: 1 1 42%; min-width: 288px;}
   .funcBtn{ 
-    width: 100%; margin: 0 0 5px;
+    width: 100%; margin: 0 0 5px; font-size: inherit;
     background-color: $btnBg1;
     &:hover, &:focus{
       background-color: $btnBg1Hover;
@@ -112,7 +113,7 @@
   // 三張照片 //////////////
   .idPhotos{
     display: flex; justify-content: center;
-    margin: 4px auto 0;
+    margin: 2px auto 0;
     figure{
       flex: 0 0 140px; margin: 0 4px;
       img{
@@ -159,7 +160,7 @@
   // 指紋 //////////////
   .twoFingerprints{
     display: flex;justify-content: center;
-    margin: 4px auto 8px; 
+    margin: 2px auto; 
   
     .fingerprint{
       flex:0 0 140px; position: relative;
@@ -223,7 +224,7 @@
 ////////////////////////////////////////////////////////////////////////////////////
 // 護照查驗
 .passport{
-  margin: 20px auto;
+  margin: 16px auto 20px;
   &.tabSet{
     .tabItems{
       display: flex;
@@ -231,7 +232,7 @@
       background-color: $thBg;
       &>button{
         flex:0 0 33.3%; margin: 0;
-        height: 2em; line-height: 2; font-size: 1.25rem; font-weight: 600;
+        height: 2.1em; line-height: 2.1; font-size: 1.25rem; font-weight: 600;
         background-color: transparent; color: $fontColor;
         box-shadow: none; transition: .2s;
         &:hover{ background-color: lighten($thBg, 8%);}
@@ -240,7 +241,7 @@
         }
       }
     }
-    .tabContentGroup{margin: 14px 0 0;}
+    .tabContentGroup{margin: 15px 0 0;}
   }
 
   // 護照擷取
@@ -275,8 +276,8 @@
     }
 
     .ppDisplay{
-      flex: 0 0 auto; width: 455px;;
-      img{ display: block; margin: 0 auto; width: 100%; height: 320px; object-fit: contain;}
+      flex: 0 0 auto; width: 480px;
+      img{ display: block; margin: 0 auto; width: 100%; height: 300px; object-fit: contain;}
     }
   }
 
@@ -285,15 +286,15 @@
     width: 96%; margin: 0 auto;
     img{
       display: block; margin: 0 auto;  border-radius: $radiusS;
-      height: 320px; width: auto; max-width: 100%; object-fit: contain; 
+      height: 300px; width: auto; max-width: 100%; object-fit: contain; 
     }
   }
   // 放大鏡
   .magnifier{
     width: 96%; margin: 0 auto;
     img{
-      display: block; margin: 0 auto;  border-radius: $radiusL;
-      height: 320px;width: 100%; object-fit: cover; 
+      display: block; margin: 0 auto;  border-radius: $radiusS;
+      height: 300px;width: 100%; object-fit: cover; 
     }
   }
 
@@ -302,6 +303,7 @@
 
 .imageData .list{
   border-radius: 0; width: 100%;
-  th{ border-right: 1px solid $tableBg;}
+  th{ border-right: 1px solid $tableBg;font-size: 1.125rem; font-weight: normal;}
+  td{font-size: 1.25rem;}
   td:nth-child(n){ text-align: center;}
 }
