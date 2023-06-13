@@ -12,7 +12,27 @@
 
 <body class="hasSidebar">
 
-  <aside class="important">
+  <header class="header">
+    <hgroup>
+      <img class="logo" src="images/logo.png" alt="logo">
+      <img class="title" src="images/h1.svg" alt="內政部移民署"></img>
+      <h1>入境查驗</h1>
+    </hgroup>
+
+    <section class="loginInfo">
+      <ul>
+        <li>移民資訊組系統設計科 10001 測試帳號</li>
+        <li><time>20230303</time><time>18:07:33</time></li>
+      </ul>
+      <ul>
+        <li>202303030901.r0</li>
+        <li>雲端正式環境</li>
+        <li>WS:0(7001)桃園二期航站F110001</li>
+      </ul>
+    </section>
+  </header>
+
+  <aside class="importantMsg">
     <section class="photoThumb">
       <h2>重大訊息</h2>
       <ul>
@@ -41,26 +61,6 @@
     </section>
   </aside>
 
-  <header class="header">
-    <hgroup>
-      <img class="logo" src="images/logo.png" alt="logo">
-      <img class="title" src="images/h1.svg" alt="內政部移民署"></img>
-      <h1>入境查驗</h1>
-    </hgroup>
-
-    <section class="loginInfo">
-      <ul>
-        <li>移民資訊組系統設計科 10001 測試帳號</li>
-        <li><time>20230303</time><time>18:07:33</time></li>
-      </ul>
-      <ul>
-        <li>202303030901.r0</li>
-        <li>雲端正式環境</li>
-        <li>WS:0(7001)桃園二期航站F110001</li>
-      </ul>
-    </section>
-  </header>
-
   <h2>入境查驗 (擷取)</h2>
 
   <main class="entryInspection">
@@ -72,7 +72,7 @@
           <th>入國登記表</th>
           <td>00000000</td>
           <th>入境證號</th>
-          <td>Z800000001</td>
+          <td>Z800000001<!-- <span class="alert">Z800000001</span> --></td>
         </tr>
         <!-- <tr>
           <th>註記</th>
@@ -118,7 +118,8 @@
         <tr>
           <td>性別</td>
           <td><input type="text" value="F (女)"></td>
-          <td class="warning">出生地</td>
+          <td>出生地</td>
+          <!-- <td class="warning">出生地</td> -->
           <td><input type="text" value="越南"></td>
         </tr>
         <tr>
@@ -171,11 +172,11 @@
           <td>桃園國際機場 (TPE)</td>          
         </tr>
         <tr>
-          <td class="warning">PNR</td>
+          <td>PNR</td>
           <td colspan="3">
             <input type="text" value="ABC123">
-            <!-- <p class="notice check">APIS與PNR比對成功</p> -->
-            <p class="notice error">無符合的APIS/PNR資料</p>
+            <p class="notice check">APIS與PNR比對成功</p>
+            <!-- <p class="notice error">無符合的APIS/PNR資料</p> -->
           </td>
         </tr>
       </table>
@@ -184,18 +185,18 @@
 
     <div class="imageData">
 
-      <div class="biometrics">
+      <section class="biometrics">
 
         <!-- 拍攝照片 -->
         <section class="takePhoto">
           <button class="funcBtn" type="button">F3 拍攝照片</button>
           <div class="idPhotos">
-            <!-- 尚未擷取 
+            <!-- 尚未擷取 -->
               <figure>
                 <figcaption>本次擷取</figcaption>
                 <img src="images/icon_camera.png">
               </figure>
-            -->
+            
             <!-- 比對符合  
               <figure class="matched" title="比對符合">
                 <figcaption>本次擷取</figcaption>
@@ -203,11 +204,11 @@
               </figure>-->
            
           
-            <!-- 比對不符合 -->
+            <!-- 比對不符合 
               <figure class="notMatched" title="比對不符合">
                 <figcaption>本次擷取</figcaption>
                 <img src="publicData/IDphoto_1.jpg">
-              </figure>  
+              </figure> --> 
 
             <figure>
               <figcaption>系統照片</figcaption>
@@ -225,7 +226,7 @@
           <button class="funcBtn" type="button">F6 擷取指紋</button>
           <div class="twoFingerprints">
 
-            <!-- 尚未擷取時，選擇原因
+            <!-- 尚未擷取時，選擇原因 --> 
             <div class="fingerprint">
               <span class="caption">左手</span>
               <img src="publicData/fingerpreint1.png">
@@ -234,7 +235,7 @@
                 <option value="1">什麼原因</option>
                 <option value="1">... ... ...</option>
               </select>
-            </div> --> 
+            </div>
 
             <!-- 已擷取
             <div class="fingerprint scanned" title="已擷取">
@@ -242,11 +243,11 @@
               <img src="publicData/fingerpreint1.png">
             </div> -->
 
-            <!-- 不符合 -->
+            <!-- 不符合
             <div class="fingerprint notMatch" title="1:1 不符合">
               <span class="caption">左手</span>
               <img src="publicData/fingerpreint1.png">
-            </div>
+            </div> -->
 
             <div class="fingerprint">
               <span class="caption">右手</span>
@@ -268,21 +269,20 @@
 
         </section>
 
-      </div>
+      </section>
 
-      <!-- 護照擷取 -->
+      <!-- 頁籤切換 -->
       <section class="passport tabSet">
         <div class="tabItems">
           <button type="button" class="now">護照擷取</button>
           <button type="button">即時影像</button>
           <button type="button">放大鏡</button>
         </div>
-        <div class="tabContentGroup">
-          <div class="tabContent" style="display: none;">
-
+        <div class="tabContentGroup"><!-- 護照擷取 -->
+          <div class="tabContent">
             <div class="getPassport">
-              <div class="selectImg">
-                <button type="button"><img src="publicData/ppImgs1.jpg" >
+              <div class="lightSources">
+                <button type="button" class="now"><img src="publicData/ppImgs1.jpg" >
                   <span>自然光</span>
                 </button>
                 <button type="button"><img src="publicData/ppImgs2.jpg" >
@@ -298,14 +298,16 @@
             </div>
           </div>
 
-          <div class="tabContent">
-            <div class="showImgHere">
+          <div class="tabContent" style="display: none;"><!-- 即時影像 -->
+            <div class="livePhoto">
               <img src="publicData/photo3x2.jpg">
             </div>
           </div>
-          <div class="tabContent" style="display: none;">
-            <div class="showImgHere">
-              <img src="publicData/img3x2.jpg">
+          
+          <div class="tabContent" style="display: none;"><!-- 放大鏡 -->
+            <div class="magnifier">
+              <!-- <img src="publicData/passportImg.jpg"> -->
+              <img src="publicData/sampleImg1.jpg">
             </div>
           </div>
         </div>
