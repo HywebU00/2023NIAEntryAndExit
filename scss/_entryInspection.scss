@@ -1,308 +1,31 @@
+// 入境查驗 (擷取) ////////////////////////////////////////////////////////////////////////////////////
+// 左右Field排版
 .entryInspection{
 
-  width: 96%; margin: 0 auto;
-  display: flex;
+  width: 96%; margin: 0 auto; display: flex;
 
-
-  .textData{
+  .leftField{
     flex:1 1 49%; margin-right: 2%; padding-bottom: 8px;
     border-top: 3px solid $borderColor;
     border-bottom: 3px solid $borderColor;
   }
-  .imageData{flex: 0 0 49%; min-width: 754px;}
-
+  .rightField{ flex: 0 0 49%; min-width: 754px;}
 
   @media screen and (max-width: $wwNormal){
     display: block;
-    .textData{
+    .leftField{
       margin-bottom: 50px; margin-right: 0;
     }
   }
   
-
-
-
-
-
-  ////////////////////////////////////////////////////////////////////////////////////
-  .textData{
-
-    // 上方 「入國登記表」、「入境證號」
-    .meta{ 
-      border: none;
-      th{width: 6em;}
-
-      &~.formLayout{
-        position: relative; margin-top: 24px;
-        &::before{
-          content: ''; display: block; position: absolute;
-          top: -14px; left: 0; right: 0; height: 3px;
-          background-color: $borderColor;
-        }
-      }
-    }
-
-    // 表單排版表格
-    .formLayout{
-      width: 100%;
-      td{
-
-        &:nth-child(odd){ width: 6em;
-          &.warning{ width: 7em; padding-left: 0;}
-        }
-        &:nth-child(even){ width: calc(50% - 8em); padding: 5px 4px 4px;}
-        &[colspan="3"]{ width: calc(100% - 8em);}
-
-        &.longText{
-          position: relative;
-          &::before{
-            content: attr(title); position: absolute; left: 4em; top: 1.6em;
-            padding:.4em .6em; z-index: 3;
-            width: auto; white-space: nowrap;
-            border-radius: $radiusM; background: $hilight; color: $fontInvert;
-            box-shadow: rgba(0,0,0,.4) 0 2px 10px;
-            opacity: 0; height: 0; transition: .3s;
-          }
-          &:hover{
-            &::before{opacity: 1; height: 2.1em;}
-          }
-        }
-
-        .ListInCell{ color: $secondary;}
-      }
-    }
-
-
-    // 中間的一列 buttons
-    .linkButtons {
-      display: flex; padding: 3px; margin: 8px auto 4px;
-      .button {
-        flex: 1 1 auto; width: auto; margin: 0 3px; font-size: 1.125rem;
-        &>a{padding: 0 .5em; height: 2.1em; line-height: 2.2;}
-      }
-
-      & + .formLayout{
-          margin-top: 0;
-        &::before {display: none;}
-      }
-    }
-    
-  
-  }
-
-
-  
 }
 
+@import "_entryInspLeftField"; // 左半部資料
+@import "_biometrics.scss"; // 照片和指紋
+@import "_getPassport.scss"; // 護照查驗
 
-////////////////////////////////////////////////////////////////////////////////////
-// 照片和指紋
-.biometrics{
-  display: flex; justify-content: space-between;
-  font-size: 1.25em;
-  .takePhoto{flex: 1 1 64%; margin-right: 12px; min-width: 444px;}
-  .getFingerprinted{flex: 1 1 42%; min-width: 288px;}
-  .funcBtn{ 
-    width: 100%; margin: 0 0 5px; font-size: inherit;
-    background-color: $btnBg1;
-    &:hover, &:focus{
-      background-color: $btnBg1Hover;
-      box-shadow: $btnBg1Hover 0 0 0 2px;
-    }
-  }
-
-  // 三張照片 //////////////
-  .idPhotos{
-    display: flex; justify-content: center;
-    margin: 2px auto 0;
-    figure{
-      flex: 0 0 140px; margin: 0 4px;
-      img{
-        display: block; width: 140px; height: 180px; object-fit: contain;
-        background-color: $thBg;border-radius: $radiusL;
-      }
-  
-      &.matched{
-        position: relative; 
-        img{
-          box-shadow: $secondary 0 0 0 3px;
-        }
-        &::after{
-          content: attr(title);
-          position: absolute; left: 0; right: 0; bottom: -1px;
-          padding: 4px 8px 2px; text-align: center; font-weight: bold;
-          border-radius: 0 0 $radiusL $radiusL;
-          background-color: transparentize($secondary, .15); color: $fontInvert;
-        }
-      }
-  
-      &.notMatched{
-        position: relative;
-        &::before{
-          content: ''; position: absolute; left: 0;right: 0;bottom: 0;
-          height: 180px;
-          border-radius: $radiusL;
-          background-color: transparentize($hilight, .3);  
-        }
-        &::after{
-          content: attr(title);
-          position: absolute; left: 0; right: 0;top: 50%;;
-          padding: 6px; text-align: center; font-weight: bold;
-          color: $fontInvert;
-        }
-      }
-    }
-    figcaption{
-      display: block; width: 100%;margin: 0 auto 4px;
-      text-align: center;
-    }
-  }
-  
-  // 指紋 //////////////
-  .twoFingerprints{
-    display: flex;justify-content: center;
-    margin: 2px auto; 
-  
-    .fingerprint{
-      flex:0 0 140px; position: relative;
-      .caption{
-        display: block; margin: 0 auto 4px;
-         text-align: center; 
-      }
-      img{ display: block;width: 100%; height: 120px;object-fit: cover;border-radius: $radiusL; }
-      select{
-        position: absolute; left: 0; right: 0; bottom: 0; top: auto;
-        height: 1.8em; line-height: 1.8; background-position: right 10px top 14px;
-        border-radius: 0 0 $radiusL $radiusL;
-        background-color: transparentize($secondary, .1);
-        &:focus, &:hover{box-shadow:$secondary 0 0 0 2px;}
-      }
-  
-      &:first-child{ margin-right: 8px;}
-      &.scanned{
-        &::after{
-          content: attr(title); position: absolute; left: 0; right: 0; bottom: 0;
-          padding: 6px; text-align: center; font-weight: bold;
-          border-radius: 0 0 $radiusL $radiusL;
-          background-color: transparentize($secondary, .1); color: $fontInvert;
-        }
-      }
-      &.notMatch{
-        &::before{
-          content: ''; position: absolute; left: 0;right: 0;bottom: 0; height: 120px;
-          border-radius: $radiusL;
-          background-color: transparentize($hilight, .3); color: $fontInvert;
-  
-        }
-        &::after{
-          content: attr(title); position: absolute; left: 0; right: 0; top: 50%;
-          padding: 6px; text-align: center; font-weight: bold;
-          color: $fontInvert;
-        }
-  
-        
-      }
-    }
-  }
-    // 指紋比對結果
-  .comparison{
-    display: flex; align-items: center; 
-    margin: 8px 0; font-size: 1.125rem;
-    ul{
-      flex: 1 1 auto;
-      list-style: none; margin: 0; padding: 0; line-height: 1.3;
-      li{
-        em{ color: $hilight;}
-        & + li{ margin-top: .2em;}
-      }
-    }
-    .button{margin: 0 4px;}
-  }
-}
-
-
-
-////////////////////////////////////////////////////////////////////////////////////
-// 護照查驗
-.passport{
-  margin: 16px auto 20px;
-  &.tabSet{
-    .tabItems{
-      display: flex;
-      border-radius: 2em;
-      background-color: $thBg;
-      &>button{
-        flex:0 0 33.3%; margin: 0;
-        height: 2.1em; line-height: 2.1; font-size: 1.25rem; font-weight: 600;
-        background-color: transparent; color: $fontColor;
-        box-shadow: none; transition: .2s;
-        &:hover{ background-color: lighten($thBg, 8%);}
-        &.now{ background-color: $btnBg1; color: $fontInvert;
-          &:hover{ background-color: $secondary}
-        }
-      }
-    }
-    .tabContentGroup{margin: 15px 0 0;}
-  }
-
-  // 護照擷取
-  .getPassport{
-    width: 96%;margin: 0 auto;
-    display: flex; align-items: center; justify-content: center;
-    
-    // 小圖：自然光、紫外光、紅外光
-    .lightSources{
-      flex: 0 0 auto; margin: 0 3% 0 0; width: 112px;
-      button{
-        display: block; line-height: 1; height: auto;
-        margin: 0 0 10px; padding: 0;
-        background: none; box-shadow: none; border-radius: 0;
-        color: $fontColor; 
-        
-        &:last-child{margin-bottom: 0;}
-        img{ 
-          display: block; width: 112px; height: 60px; object-fit: cover; 
-          margin: 0 0 6px; transition: .2s;
-        }
-        span{ display: block;}
-
-        &:hover, &:focus{
-          img{box-shadow: $secondary 0 0 0 2px;}
-        }
-
-        &.now{
-          img{box-shadow: $secondary 0 0 0 4px;}
-        }
-      }
-    }
-
-    .ppDisplay{
-      flex: 0 0 auto; width: 480px;
-      img{ display: block; margin: 0 auto; width: 100%; height: 300px; object-fit: contain;}
-    }
-  }
-
-  // 即時影像
-  .livePhoto{
-    width: 96%; margin: 0 auto;
-    img{
-      display: block; margin: 0 auto;  border-radius: $radiusS;
-      height: 300px; width: auto; max-width: 100%; object-fit: contain; 
-    }
-  }
-  // 放大鏡
-  .magnifier{
-    width: 96%; margin: 0 auto;
-    img{
-      display: block; margin: 0 auto;  border-radius: $radiusS;
-      height: 300px;width: 100%; object-fit: cover; 
-    }
-  }
-
-}
-
-
-.imageData .list{
+// 護照下方表格
+.rightField .list{
   border-radius: 0; width: 100%;
   th{ border-right: 1px solid $tableBg;font-size: 1.125rem; font-weight: normal;}
   td{font-size: 1.25rem;}

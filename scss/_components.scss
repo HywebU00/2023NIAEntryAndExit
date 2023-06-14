@@ -199,6 +199,9 @@ button.funcBtn{
   select{ flex: 1 1 40%; width: auto; margin: 0 4px 4px; }
 
 }
+.formLayout td .stayingDays{
+  margin-bottom: -4px;
+}
 
 // 提示訊息顏色 ////////////////////////////////////////
 .alert{color: $alert;}

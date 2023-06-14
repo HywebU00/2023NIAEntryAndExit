@@ -1,11 +1,9 @@
 .header{
   @extend %mainWidth; padding-top: 20px; margin-bottom: 40px;
   display: flex;flex-flow:row wrap; align-items: flex-start;
-
   hgroup{
-    flex: 1 1 50%;
+    flex: 1 1 auto;
     display: flex; flex-flow:row nowrap; align-items: center;
-    // outline: 1px dashed red;
     img.logo {
      width: 64px; height: 64px; margin-right: 10px;
     }
@@ -23,7 +21,6 @@
   .loginInfo{
     flex: 1 1 50%;
     color: $fontColorDim;
-    // outline: 1px dashed red;
     ul{
       list-style: none; margin: 0; padding: 0;
       line-height: 1.1; 
@@ -53,26 +50,16 @@
 
   @media screen and (max-width: 1200px){
     hgroup{
-      flex-basis:30%;
-      display: block; position: relative; height: 64px;
-
-      img.logo {
-        position: absolute; left: 0; top: 0;
+      flex-basis:30%; display: block; 
+      img.logo {float: left; }
+      img.title{
+        &:nth-last-child(2){
+          height: 20px;margin-top: 3px;
+        }
+        &:last-child{margin-top: 17px;}
       }
-      img.title, h1{
-        position: relative;
-        left: 72px;
-      }
-      img.title{height: 20px; top: 3px;}
-      h1{
-        margin-left: -2px; margin-top: 3px;
-        max-width: calc(100% - 72px);
-      }
-    }
-    .loginInfo{
-      
+      h1{ margin-left: 72px;}
     }
   }
-
 
 }
