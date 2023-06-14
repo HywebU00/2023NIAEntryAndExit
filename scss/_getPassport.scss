@@ -12,9 +12,9 @@
         height: 2.1em; line-height: 2.1; font-size: 1.25rem; font-weight: 600;
         background-color: transparent; color: $fontColor;
         box-shadow: none; transition: .2s;
-        &:hover{ background-color: lighten($thBg, 8%);}
+        &:hover, &:focus{ background-color: lighten($thBg, 8%);}
         &.now{ background-color: $btnBg1; color: $fontInvert;
-          &:hover{ background-color: $secondary}
+          &:hover, &:focus{ background-color: $secondary}
         }
       }
     }
