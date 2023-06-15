@@ -20,7 +20,7 @@ input, textarea, select, button, datalist, label {
   -moz-appearance: none;
 
   height: 2.1em; line-height: 2.1; padding: 0 .8em; margin: 0;
-  border-radius: 8px;
+  border-radius: $radiusM;
   vertical-align: middle; border: none;
   background-color: $inputBg;
   transition: .2s;
@@ -41,7 +41,7 @@ input, textarea, select, button, datalist, label {
   height: 2.1em; line-height: 2.1;
   padding: 0 32px 0 .8em;
   vertical-align: middle;
-  border: none;  border-radius: 8px;
+  border: none;  border-radius: $radiusM;
   transition: .2s;
   background: $inputBg url(../images/selectArrow.svg) no-repeat right 10px top .9em;
   background-size: .8em auto;
@@ -148,7 +148,7 @@ input[type="radio"] {
   }
 }
 input[type="checkbox"]{ 
-  border-radius: 3px;
+  border-radius: $radiusS;
   &:focus{box-shadow: $btnBg2 0 0 0 2px; border-color: $fontInvert;}
   &:checked{
     background: $btnBg2 url(../images/icon_check.svg) no-repeat center .05em;

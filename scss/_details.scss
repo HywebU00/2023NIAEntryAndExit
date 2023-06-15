@@ -1,3 +1,5 @@
+////////////////////////////////////////////////////////////////////////////////////
+// th, td 在同一個 tr 中的表格（一格標題對應一格內容） /////////////////////////////
 table.meta{
   width: 100%; border-collapse: collapse;
   font-size: 1.125rem; line-height: 1.5; 
@@ -20,6 +22,8 @@ table.meta{
 
 }
 
+////////////////////////////////////////////////////////////////////////////////////
+// table.meta 的外部容器 ///////////////////////////////////////////////////////////
 .details{
   @extend %mainWidth; margin: 0 auto;
 
@@ -33,6 +37,7 @@ table.meta{
 
   table.meta{
     background-color: $tableBg; color: $fontColor;
+    // 一個 tr 中可能多達３對 th:td
     th{
       width: 11.33%; padding-right: .8em; padding-left: .8em;
       background-color: $thBg; color: $thColor;
@@ -46,8 +51,5 @@ table.meta{
     }
   }
 
-
-  .page{
-    width: 100%;
-  }
+  .page{width: 100%;}
 }

@@ -1,13 +1,15 @@
 @import "_colorVar";
 @import "_basic";
-@import "_components";
-@import "_header";
-@import "_profile";
-@import "_list";
-@import "_details";
-@import "_page";
-@import "_form";
+@import "_components"; // 元件、模組
+@import "_header"; // 版頭
+@import "_profile"; // 旅客照片＋基本資料（條列和詳細資料上方）
+@import "_list"; // 條列樣式
+@import "_details"; // 詳細資料
+@import "_page";  // 分頁
+@import "_form";   // 表單元件
 @import "_formLayout";    // 表單排版表格
-@import "_search";
-@import "_inspection"; // 查驗
+@import "_search"; // 查詢
+// -----------------------------------------------June.2023
+@import "_importantMsg"; // 側欄：重大訊息
+@import "_inspection"; // 查驗：前一筆＋開始查驗
 @import "_entryInspection"; // 入境查驗 (擷取)

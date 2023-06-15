@@ -1,7 +1,8 @@
-// 排版 //////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+// 查驗 ////////////////////////////////////////////////////////////////////////////
 main.inspection {
+  @extend %mainWidth;
   display: flex;
-  width: 96%; margin: 0 auto;
 
   // 查驗
   .thisPassenger, .prePasssenger {
@@ -13,13 +14,12 @@ main.inspection {
     }
   }
 
-  // 前一筆查驗
+  ////////////////////////////////////////////////////////////////////////////////////
+  // 前一筆查驗 //////////////////////////////////////////////////////////////////////
   .prePasssenger{
     flex: 1 1 20%; margin: 0 2% 0 0; max-width: 300px;
     h2{ color: $fontColorDim2;}
-    .borderBox{
-      padding: 40px 0;
-    }
+    .borderBox{padding: 40px 0;}
     .photo{
       margin: 0 auto 40px; width: 140px;
       img{
@@ -51,7 +51,8 @@ main.inspection {
   }
 
 
-  // 開始查驗
+  ////////////////////////////////////////////////////////////////////////////////////
+  // 開始查驗 ////////////////////////////////////////////////////////////////////////
   .thisPassenger{
     flex: 1 1 78%; margin: 0 auto;font-size: 1.25rem;
     h2{
@@ -90,16 +91,12 @@ main.inspection {
   }
 
 
-  @media screen and (min-width: $wwMaximum){
-  }
-
   @media screen and (max-width: $wwNormal){
     display: block;
     .prePasssenger{
       max-width: none; margin: 0 auto 20px;
       .borderBox{
-        display: flex;
-        padding: 0; border: none;
+        display: flex; padding: 0; border: none;
         .photo{ 
           flex: 0 0 auto;width: 160px; margin:0 16px 0 0;
           img{ height: 160px;}
@@ -114,12 +111,12 @@ main.inspection {
             float: left; width: 31%; margin: 3px 0 3px 2%;
             &:first-child{
               width: 34%;padding-bottom: 2em; margin-left: 0;
+              th{ width: 2em;}
             }
           }
         }
       }
     }
-
 
     .thisPassenger{
       margin-top: 40px;
@@ -128,76 +125,4 @@ main.inspection {
   }
 
 
-  @media screen and (max-width: $wwSmall){
-    // width: 96%;
-  }
-
-}
-
-
-////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////
-// 側欄
-aside.importantMsg{
-  position: absolute; left: 0; top: 0; bottom: 0;
-  width: 11%; min-height: 100vh;
-
-  @media screen and (min-width: $wwMaximum){
-    width: 224px;
-  }
-}
-// 重大訊息的人像照
-.photoThumb{
-  position: relative; height: 100%;width: 100%;
-  padding: 24px 0; margin: 0;
-  background-color: $thBg;
-
-  h2{
-    font-size: 1.5rem; margin: 0;
-    color: $secondary;
-  }
-
-  ul{
-    list-style: none; margin: 0 auto; padding: 0; width: 72%;
-    line-height: 1.3;
-  }
-  li{
-    margin:20px 0 ;text-align: center;
-    img{
-      display: block; margin: 0 auto 8px; width: 100%; height: auto; object-fit: cover;
-      border-radius: 12px;
-    }
-    p{line-height: inherit; margin: 4px 0;}
-  }
-
-  .more{
-    position: fixed; left: 0;bottom: 0;width: 11%;
-    margin: 0; padding: 60px 0 20px;
-    font-size: 1.25rem; font-weight: bold;
-    background-image: linear-gradient(to top, $thBg 45%, transparent  100%);
-    a{
-      display: block; text-align: center;
-      width: 72%; margin: 0 auto; padding: 0;
-      height: 2.8em; line-height: 2.8; border-radius: 2em;
-      background-color: $btnBg2; color: $fontInvert;
-      transition: .2s;
-      &:hover, &:focus{ background-color: $btnBg2Hover; box-shadow: $btnBg2Hover 0 0 0 3px; }
-    }
-  }
-
-  @media screen and (min-width: $wwMaximum){
-    li{
-      img{ height: 161px;}
-    }
-
-    .more{
-      width: 224px;
-    }
-  }
 }

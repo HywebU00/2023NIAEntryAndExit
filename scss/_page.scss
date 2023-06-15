@@ -1,15 +1,15 @@
-$numberColor: #E4E7F0;
-$numberColorNow: #202B40;
-$numberBgNow: #ADB8CC;
-$numberBgHover:#3F5073;
+$numberColor: $white;
+$numberColorNow: $primary;
+$numberBgNow: $fontColorDim2;
+$numberBgHover: $borderColorDim;
 
+// 換頁模組
 .page{
   @extend %mainWidth; margin-top: 24px;
   display: flex; flex-flow: row wrap;justify-content: space-between;
   text-align: center; font-weight: 600; font-size: 1.125rem;
   position: relative;
 
-  // outline: 1px dashed #fff9;
   ul{list-style: none; margin: 0; padding: 0;}
 
   .pageGo{

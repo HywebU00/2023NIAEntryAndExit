@@ -1,11 +1,8 @@
-// @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
 // ---------- RWD 斷點 ---------- //
 $wwSmall: 1024px;
 $wwNormal: 1440px;
 $wwMaximum: 1920px;
 // ---------- RWD 斷點 ----------- //
-
 
 // ---------- RWD 斷點 ----------- //
 $radiusL: 16px;
@@ -16,9 +13,11 @@ $radiusS: 4px;
 %mainWidth {
   width: 96%; margin-left: auto; margin-right: auto;
 }
+
 ////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////
+
 body{
   position: relative; margin: 0;padding: 0;
   background-color: $bodyBg; color: $fontColor;
@@ -44,6 +43,7 @@ body{
   }
 }
 
+////////////////////////////////////////////////////////////////////////////////////
 
 a{
   text-decoration: none; color: #fff;

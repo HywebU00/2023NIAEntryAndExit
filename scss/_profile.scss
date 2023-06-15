@@ -1,21 +1,23 @@
+////////////////////////////////////////////////////////////////////////////////////
+// 旅客相片 ＋ 基本資訊 ////////////////////////////////////////////////////////////
 .profile{
   @extend %mainWidth; margin-bottom: 24px;
   display: flex; justify-content: space-between;
 
-  // 旅客相片
+  // 旅客相片 ////////////////////////////////////////////////////////////////////////
   .photo{
     flex: 0 0 126px; width: 126px;
     img{
       display: block; width: 126px; height: 162px; object-fit: contain;
-      border-radius: 16px;
+      border-radius: $radiusL;
       background-color: #fff;
     }
   }
 
-  // basicInfo： 中、英文姓名，護照號碼，國籍等
+  // basicInfo： 中、英文姓名，護照號碼，國籍等 //////////////////////////////////////
   .basicInfo{
     position: relative; width: calc(100% - 142px);font-size: 1.125rem;
-    border-radius: 16px; padding: 8px 0; padding: 5px;
+    border-radius: $radiusL; padding: 8px 0; padding: 5px;
     border: 2px solid $borderColorDim; border-left: none; border-right: none;
     dl{
       position: relative; top: 50%; transform: translateY(-50%);
@@ -25,7 +27,6 @@
       display: flex; flex-flow: row wrap;
       &>div {
         flex: 0 0 23%;margin:.5em 1%;overflow: hidden; 
-        // outline: 1px dashed #f0c8;
         &.nameEng{ flex-basis: 73%; }
       }
     }
@@ -38,7 +39,7 @@
         width: 2px; height: .9em; background: $fontColorDim;
       }
     }
-    dd{ margin: 0; float: left; width:calc(100% - 4.8em);  }
+    dd{ margin: 0; float: left; width:calc(100% - 4.8em); }
   }
 
 }

@@ -1,8 +1,15 @@
-// 入境查驗 (擷取) ////////////////////////////////////////////////////////////////////////////////////
-// 左右Field排版
+////////////////////////////////////////////////////////////////////////////////////
+// 入境查驗 (擷取) /////////////////////////////////////////////////////////////////
+
+@import "_entryInspLeftField"; // 左半部資料
+@import "_biometrics.scss"; // 照片和指紋
+@import "_getPassport.scss"; // 護照查驗
+
+// 左右 Field 排版
 .entryInspection{
 
-  width: 96%; margin: 0 auto; display: flex;
+  @extend %mainWidth;
+  display: flex;
 
   .leftField{
     flex:1 1 49%; margin-right: 2%; padding-bottom: 8px;
@@ -20,9 +27,6 @@
   
 }
 
-@import "_entryInspLeftField"; // 左半部資料
-@import "_biometrics.scss"; // 照片和指紋
-@import "_getPassport.scss"; // 護照查驗
 
 // 護照下方表格
 .rightField .list{

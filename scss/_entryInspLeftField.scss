@@ -1,7 +1,8 @@
-// 入境查驗左半部
+////////////////////////////////////////////////////////////////////////////////////
+// 入境查驗左半部 //////////////////////////////////////////////////////////////////
 .entryInspection .leftField{
 
-  // 上方 「入國登記表」、「入境證號」
+  // 上方 「入國登記表」、「入境證號」////////////////////////////////////////////////
   .meta{ 
     border: none;
     th{width: 6em;}
@@ -9,6 +10,7 @@
     &~.formLayout{
       position: relative; margin-top: 24px;
       &::before{
+        // 畫分隔線 
         content: ''; display: block; position: absolute;
         top: -14px; left: 0; right: 0; height: 3px;
         background-color: $borderColor;
@@ -16,7 +18,7 @@
     }
   }
 
-  // 表單排版表格
+  // 表單排版表格 ////////////////////////////////////////////////////////////////////
   .formLayout{
     width: 100%;
     td{
@@ -46,8 +48,7 @@
     }
   }
 
-
-  // 中間的一列 buttons
+  // 中間一列 buttons ////////////////////////////////////////////////////////////////
   .linkButtons {
     display: flex; padding: 3px; margin: 8px auto 4px;
     .button {

@@ -1,6 +1,7 @@
+// 條列表格
 .list{
   @extend %mainWidth;
-  border-radius: 16px 16px 0 0; overflow: hidden;
+  border-radius: $radiusL $radiusL 0 0; overflow: hidden;
   background: $tableBg;
 
   &>table{
