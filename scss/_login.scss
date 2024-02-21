@@ -1,28 +1,66 @@
+// 登入頁
 .login{
-  width: 96%; max-width: 600px; margin: 0 auto;
-  padding: 90px 0 40px;
-  // outline: 1px solid #fff3;
-  table.formLayout{
-    margin: 0 auto; width: 100%;
+  position: fixed; left: 50%; top: 18.5vh;
+  margin: 0 auto; padding: 35px 52px 30px;
+  background-color: rgb(48 61 87 / .8);
+  box-shadow: rgb(0 0 0 / .25) 0 0 20px;
+  border-radius: 16px;
+
+  h1{ 
+    font-size: 22px; line-height: 1.2;
+    width: calc(17em + 72px);
+    margin: 0 auto 22px; padding: 1px 0 14px 72px; 
+    border-bottom: 1px solid #7C8AA6;
+    background: url(../images/logo.png) no-repeat 0 0;
+    background-size: 64px;
+    .c{
+      display: block; white-space: nowrap;color: #fff;
+      em{ color: #50D0D0; display: inline-block;}
+    }
+    .e{
+      display: block; margin: 4px 0 0;
+      font-weight: normal; font-size: 1rem;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #C8D0D9;
+    }
+  }
+
+  table{
+    margin: 0 auto; border: none; border-collapse: collapse;
+    font-size: 1.375rem;
     td{
-      padding-left: 16px; padding-right: 16px;
-      // 
-      &:nth-child(odd) {
-        text-align: right; width:3em; padding-right:0;
-      }
-      &:nth-child(even) {
+      padding: 8px 3px;
+      &:first-child {
+        padding-right: 10px;
+        text-align: right; white-space: nowrap;
+        &::after{content: ' /';}
       }
     }
-  
+    input[type="text"], input[type="password"]{ 
+      height: 2.2em; font-size: 1em; width: 280px;
+    }
   }
-
   .btnDv{
-    // outline: 1px solid #c00;
-    width: 90%; margin-left: auto; margin-right: auto;
+    margin: 6px auto; width: 360px;
     display: flex; justify-content: space-between;
-    input{ flex: 1 1 50%; width: auto;}
+    input{ flex: 1 1 50%; width: auto; margin: 5px;}
   }
 
-  .versionNumber{ text-align: center;}
+  .versionNumber {
+    margin: 16px auto 0; text-align: center;
+    color: #95A6B6;
+  }
+
+  @media screen and (max-width: 1200px){
+    transform: translateX(-50%);
+  }
+}
+
+
+// 登入頁 body 元件背景
+.loginBody{
+  height: 100vh;
+  background:url(../images/login_bg.png) no-repeat 0 0 ;
+  background-size:cover;
 }
 
