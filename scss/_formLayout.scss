@@ -19,13 +19,13 @@ table.formLayout{
           margin-right: 3px; vertical-align: middle;
           background: url(../images/icon_warning.svg) no-repeat center top;
           background-size: 100% auto;
-    
         }
       }
     }
     &:nth-child(even) {
       color: $fontColor;
-      &>input[type="text"]:only-child{width: 100%;}
+      &>input[type="text"]:only-child,
+      &>input[type="password"]:only-child{width: 100%;}
     }
   }
 

@@ -1,0 +1,28 @@
+.login{
+  width: 96%; max-width: 600px; margin: 0 auto;
+  padding: 90px 0 40px;
+  // outline: 1px solid #fff3;
+  table.formLayout{
+    margin: 0 auto; width: 100%;
+    td{
+      padding-left: 16px; padding-right: 16px;
+      // 
+      &:nth-child(odd) {
+        text-align: right; width:3em; padding-right:0;
+      }
+      &:nth-child(even) {
+      }
+    }
+  
+  }
+
+  .btnDv{
+    // outline: 1px solid #c00;
+    width: 90%; margin-left: auto; margin-right: auto;
+    display: flex; justify-content: space-between;
+    input{ flex: 1 1 50%; width: auto;}
+  }
+
+  .versionNumber{ text-align: center;}
+}
+

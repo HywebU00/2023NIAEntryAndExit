@@ -101,24 +101,6 @@ button, input[type="submit"], input[type="button"], input[type="reset"]{
   
 }
 
-// .button>a, 
-// .button>a{ border-radius: 2em;}
-
-// input[type="reset"]{
-//   background-color: $btnBg2; color: $fontInvert;
-//   &:hover, &:focus{
-//     box-shadow: $btnBg2 0 0 0 2px inset;
-//   }
-//   &:focus{
-//     box-shadow: $btnBg2 0 0 0 1px, $btnBg2 0 0 0 4px;
-//   }
-// }
-
-// .button{
-//   display: inline-block; vertical-align: middle;
-//   &>a{display: block; text-decoration: none; text-align: center; white-space: nowrap; }
-// }
-
 textarea {
   @extend %textInput;
   resize: vertical;line-height: 1.6;height: 10em;
@@ -171,7 +153,6 @@ input[disabled],
 input[disabled]:hover,
 input[disabled]:focus {
   background-color: $gray;
-  // border-color: $borderColorDim;
   color: $disabledColor;
   box-shadow: none;
 }
@@ -185,8 +166,6 @@ input[type="text"][readonly],
 input[type="text"][readonly]:hover,
 input[type="text"][readonly]:focus {
   background-color: $borderColorDim; color: $fontColor;
-  // border-style: dashed;
-  // border-color: $borderColorDim;
   box-shadow: none;
   cursor: default;
 }

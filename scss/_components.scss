@@ -270,3 +270,33 @@ button.funcBtn{
 // 局部、片段文字顏色 //////////////////////////////////////////////////////////////
 .alert{color: $alert;} //入境證號
 .finish{ color: $pass;}
+
+
+////////////////////////////////////////////////////////////////////////////////////
+// 燈箱、彈出訊息遮罩 //////////////////////////////////////////////////////////////
+.overlay{
+  position: fixed;left: 0; right: 0; top: 0; bottom: 0;
+  background-color: rgb(0 0 0 / .6);
+}
+
+
+button.closeThis{
+  position: absolute; right: 12px; top: 12px;
+  padding: 0; border-radius: 0;
+  width: 56px; height: 56px;
+  background-color: transparent;
+  &::before, &::after {
+    content: ""; position: absolute;
+    left: calc(50% - 2px); top: calc(50% - 16px);
+    width: 4px; height: 32px;
+    background-color: #7C8AA6;
+  }
+  &::before{ transform: rotate(45deg);}
+  &::after{ transform: rotate(-45deg);}
+
+  &:hover, &:focus {
+    background-color: #7C8AA6;
+    &::before, &::after {background-color: #fff;}
+  }
+
+}
