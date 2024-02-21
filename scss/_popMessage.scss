@@ -1,10 +1,24 @@
 // 提示/錯誤訊息視窗
 .popMessage{
-  position: fixed; top: 220px; left: 50%; transform: translateX(-50%);
-  width: 650px; max-height: calc(100vh - 260px); overflow-y: auto;
+  position: fixed; top: 50%; left: 50%;
+  transform: translate(-50% , -50%);
+  width: 650px; max-height: calc(100vh - 200px);
   padding:80px 75px 50px;
   background-color: #C8D0D9; color: $primary;
-  box-shadow: rgb(0 0 0) 0 0 40px;
+  box-shadow: rgb(0 0 0 / .8) 0 0 40px;
+
+  overflow-y: auto;
+
+  // scrollbar 樣式調整
+  // --------------------------------------------------
+  &::-webkit-scrollbar {width: 10px;}
+  &::-webkit-scrollbar-track {
+    background: transparent; border-radius: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $borderColor; border-radius: 5px;
+  }
+  // --------------------------------------------------
 
   button.closeThis{right: 14px; top: 14px;}
 
@@ -24,10 +38,12 @@
   .foot{ 
     text-align: center;  padding-top:10px;
     button{
-      margin:10px auto;min-width: 300px;letter-spacing: .2em;
-      font-weight: bold; font-size: 1.3em; 
+      margin:10px auto;letter-spacing: .2em;
+      font-weight: bold; font-size: 1.3em; height: 2.7em; 
       background-color: $btnBg4; color: $white;
       &:hover, &:focus{background-color: $btnBg4Hover;}
+
+      &:only-child{min-width: 300px;}
     }
   }
 }
