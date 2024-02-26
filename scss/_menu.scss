@@ -1,6 +1,6 @@
 .menu{
   width: 84%; margin:30px auto;
-  
+  min-width: $wwNormal*.96;
   nav{
     display: flex; flex-flow: row nowrap;
     margin: 40px 0 0;
@@ -55,5 +55,9 @@
         }
       }
     }
+  }
+
+  @media screen and (max-width: $wwNormal){
+    width: 96%; min-width:0;
   }
 }

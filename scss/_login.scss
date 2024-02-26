@@ -1,29 +1,48 @@
 // 登入頁
-.login{
-  position: fixed; left: 50%; top: 18.5vh;
-  margin: 0 auto; padding: 35px 52px 30px;
-  background-color: rgb(48 61 87 / .8);
-  box-shadow: rgb(0 0 0 / .25) 0 0 20px;
-  border-radius: 16px;
+// 登入頁 body 元件背景
+.loginBody{
+  height: 100vh;
+  background:url(../images/login_bg.jpg) no-repeat center top;
+  background-size:1920px auto;
 
-  h1{ 
-    font-size: 22px; line-height: 1.2;
-    width: calc(17em + 72px);
-    margin: 0 auto 22px; padding: 1px 0 14px 72px; 
-    border-bottom: 1px solid #7C8AA6;
+  // 標題
+  .loginHeader{
+    position: fixed; top: 15vh; left: calc(50% - 254px);
+    padding: 1px 0 1px 72px;
+    width: calc(18em + 72px);
+    text-align: left;font-size: 30px; line-height: 1.2;
     background: url(../images/logo.png) no-repeat 0 0;
     background-size: 64px;
-    .c{
-      display: block; white-space: nowrap;color: #fff;
-      em{ color: #50D0D0; display: inline-block;}
+    h1{ 
+      margin: 0 auto 15px; padding: 0;
+      font-size: inherit; text-align: left;
+      .c{display: block; white-space: nowrap;color: #fff;}
+      .e{
+        display: block; margin: 4px 0 0 2px;
+        font-weight: 500; font-size: 1rem; letter-spacing: .03em;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #C8D0D9;
+      }
     }
-    .e{
-      display: block; margin: 4px 0 0;
-      font-weight: normal; font-size: 1rem;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #C8D0D9;
+    h2 {
+      margin: 0; padding: 0;
+      font-size: inherit;letter-spacing: .48em;text-align: left;
+      color: #36E5E5;
     }
   }
+
+  @media (min-width: 1920px) or (min-height: 1080px){
+    background-size: cover;
+  }
+}
+
+
+// 登入區
+.login{
+  position: fixed; left: calc(50% - 135px); top:calc(15vh + 148px);
+  margin: 0 auto ; padding: 48px 60px 100px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(48, 61, 87, 0.8) 75%, rgba(48, 61, 87, 0) 99%);
 
   table{
     margin: 0 auto; border: none; border-collapse: collapse;
@@ -47,20 +66,16 @@
   }
 
   .versionNumber {
-    margin: 16px auto 0; text-align: center;
-    color: #95A6B6;
+    margin: 12px auto 0; text-align: center;
+    color: #C8D0D9;
   }
 
-  @media screen and (max-width: 1200px){
-    transform: translateX(-50%);
-  }
+  // @media screen and (max-width: 1200px){
+  //   transform: translateX(-50%);
+  // }
+
 }
 
 
-// 登入頁 body 元件背景
-.loginBody{
-  height: 100vh;
-  background:url(../images/login_bg.png) no-repeat 0 0 ;
-  background-size:cover;
-}
+
 
