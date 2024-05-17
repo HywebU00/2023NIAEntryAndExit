@@ -2,22 +2,23 @@
 // th, td 在同一個 tr 中的表格（一格標題對應一格內容） /////////////////////////////
 table.meta{
   width: 100%; border-collapse: collapse;
-  font-size: 1.125rem; line-height: 1.5; 
+  line-height: 1.5; 
   border-width: 3px 0; border-style: solid; border-color: $borderColor;
 
   &+.meta{ margin-top: -3px;}
 
   caption{
-    text-align: center; font-size: 1.5rem;
+    text-align: center; font-size: 1.2em;
     padding: 10px 0; margin: 0;
   }
   & + .meta caption{ margin-top: 30px;}
 
   th, td{
-    padding: .6em .4em .5em;vertical-align: top;font-weight: 400;
+    padding: .3em .4em .2em;vertical-align: top;font-weight: 400;
   }
   th{
-    text-align: right; color: $thColor2;
+    text-align: right;
+    color: $thColor;
   }
 
 }
@@ -37,17 +38,30 @@ table.meta{
 
   table.meta{
     background-color: $tableBg; color: $fontColor;
+    
     // 一個 tr 中可能多達３對 th:td
+    th, td{border-bottom: 1px solid $borderColorDim;}
     th{
+      position: relative;
       width: 11.33%; padding-right: .8em; padding-left: .8em;
-      background-color: $thBg; color: $thColor;
-      border-bottom: 1px solid $tableBg;
+      // background-color: $thBg; color: $thColor;
+      // border-bottom: 1px solid $tableBg;
+      &::after {
+        content: ''; position: absolute; right: 0; top: 8px; bottom: 8px;
+        width: 3px; background-color: $btnBg1;
+        // width: 6px; height: 12px;
+        // border-style: solid; border-width: 7px 0 7px 6px;
+        // border-color: transparent transparent transparent $borderColorDim;;
+
+      }
     }
     td{
-      width: 22%; padding-left: .8em; padding-right: .8em;
-      border-bottom: 1px solid $borderColorDim;
+      width: 22%; padding-left: .6em; padding-right: .8em;
+      // border-bottom: 1px solid $borderColorDim;
       &[colspan="3"]{ width: 55.33%;}
       &[colspan="5"]{ width: 88.66%;}
+      & + th{ border-left: 1px solid $borderColorDim;}
+
     }
   }
 

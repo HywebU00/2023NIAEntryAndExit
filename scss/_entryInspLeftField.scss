@@ -22,7 +22,6 @@
   .formLayout{
     width: 100%;
     td{
-
       &:nth-child(odd){ width: 6em;
         &.warning{ width: 7em; padding-left: 0;}
       }
@@ -52,7 +51,7 @@
   .linkButtons {
     display: flex; padding: 3px; margin: 8px auto 4px;
     .button {
-      flex: 1 1 auto; width: auto; margin: 0 3px; font-size: 1.125rem;
+      flex: 1 1 auto; width: auto; margin: 0 3px; font-size: .9em;
       &>a{padding: 0 .5em; height: 2.1em; line-height: 2.2;}
     }
 

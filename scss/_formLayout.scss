@@ -2,7 +2,7 @@
 table.formLayout{
   border-collapse: collapse;
   width: 100%; margin: 0 auto;
-  font-size: 1.125em; line-height: 1.5;
+  line-height: 1.5;
   
   td{
     padding: 6px;
@@ -36,20 +36,21 @@ table.formLayout{
 }
 
 .search table.formLayout{
-  width: 90%; max-width: 900px;
+  width: 90%; max-width: 1000px;
   background-color: $tableBg;
   border-top: 3px solid $borderColor;
   border-bottom: 3px solid $borderColor;
   td{
     padding-left: 16px; padding-right: 16px;
+    border-bottom: 1px solid $borderColorDim;
     &:nth-child(odd) {
-      width: 11.5em;
-      background: $thBg; color: $thColor;
-      border-bottom: 1px solid $borderColor;
+      width: 11.5em; padding-right: 0;
+      // background: $thBg; color: $thColor;
+      // border-bottom: 1px solid $borderColor;
     }
-    &:nth-child(even) {
-      border-bottom: 1px solid $borderColorDim;
-    }
+    // &:nth-child(even) {
+    //   border-bottom: 1px solid $borderColorDim;
+    // }
   }
 
 }

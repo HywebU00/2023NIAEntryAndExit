@@ -40,13 +40,14 @@
 // 登入區
 .login{
   position: fixed; left: calc(50% - 135px); top:calc(15vh + 148px);
-  margin: 0 auto ; padding: 48px 60px 100px;
+  margin: 0 auto ; padding: 48px 60px 110px;
+  width: calc(20em + 120px);
   border-radius: 16px;
-  background: linear-gradient(180deg, rgba(48, 61, 87, 0.8) 75%, rgba(48, 61, 87, 0) 99%);
+  background: linear-gradient(180deg, rgba(48, 61, 87, 0.92) 78%, rgba(48, 61, 87, 0) 99%);
 
   table{
     margin: 0 auto; border: none; border-collapse: collapse;
-    font-size: 1.375rem;
+    font-size: 1.5rem;
     td{
       padding: 8px 3px;
       &:first-child {
@@ -65,9 +66,9 @@
     input{ flex: 1 1 50%; width: auto; margin: 5px;}
   }
 
+  .message{ margin: 12px auto; text-align: center; font-size: 1.3em;}
   .versionNumber {
-    margin: 12px auto 0; text-align: center;
-    color: #C8D0D9;
+    margin: 12px auto 0; text-align: center;color: #C8D0D9;
   }
 
   // @media screen and (max-width: 1200px){

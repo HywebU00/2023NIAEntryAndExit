@@ -7,7 +7,7 @@ $numberBgHover: $borderColorDim;
 .page{
   @extend %mainWidth; margin-top: 24px;
   display: flex; flex-flow: row wrap;justify-content: space-between;
-  text-align: center; font-weight: 600; font-size: 1.125rem;
+  text-align: center; font-weight: 400; font-size: 1.15rem;
   position: relative;
 
   ul{list-style: none; margin: 0; padding: 0;}
@@ -44,6 +44,7 @@ $numberBgHover: $borderColorDim;
       &.now{
         a{
           background-color: $numberBgNow; color: $numberColorNow;
+          font-weight: 600;
           &:hover, &:focus { box-shadow: $numberBgNow 0 0 0 2px;}
         }
       }
