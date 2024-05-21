@@ -16,10 +16,7 @@ table.meta{
   th, td{
     padding: .3em .4em .2em;vertical-align: top;font-weight: 400;
   }
-  th{
-    text-align: right;
-    color: $thColor;
-  }
+  th{text-align: right;color: $thColor;}
 
 }
 
@@ -53,6 +50,11 @@ table.meta{
         // border-style: solid; border-width: 7px 0 7px 6px;
         // border-color: transparent transparent transparent $borderColorDim;;
 
+      }
+
+      &.noData{
+        color: $fontColorIgnore;
+        &::after {background-color: darken($btnBg1, 30%);}
       }
     }
     td{
