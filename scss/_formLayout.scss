@@ -4,8 +4,8 @@ table.formLayout{
   width: 100%; margin: 0 auto;
   line-height: 1.5;
   
-  td{
-    padding: 6px;
+  td, th{
+    padding: 6px; font-weight: normal;
     &:nth-child(odd) {
       text-align: right; font-weight: 400;
       vertical-align: top; padding-top: .65em;

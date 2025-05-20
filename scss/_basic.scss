@@ -4,19 +4,26 @@ $wwNormal: 1440px;
 $wwMaximum: 1920px;
 // ---------- RWD 斷點 ----------- //
 
-// ---------- RWD 斷點 ----------- //
+// ------------ 圓角 ------------- //
 $radiusL: 16px;
 $radiusM: 8px;
 $radiusS: 4px;
-// ---------- RWD 斷點 ----------- //
+// ------------ 圓角 ------------- //
 
 %mainWidth {
   width: 96%; margin-left: auto; margin-right: auto;
+}
+%roundCorner {
+  border-radius: $radiusL;
+  border: 2px solid $borderColor;
+  border-left: none;border-right: none;
+  background-color: $bg1;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////
+// html{font-size: 20px;}
 body{
   position: relative; margin: 0;padding: 0;
   background-color: $bodyBg; color: $fontColor;

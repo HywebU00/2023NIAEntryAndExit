@@ -114,8 +114,22 @@ button.funcBtn{
         background-size: 100% auto;
       }
     }
-
   }
+
+  .button{
+    // 藍色的
+    &.funcBtn>a {
+      background: $btnBg1;color: $btnColor; 
+      &:hover, &:focus{box-shadow: $btnBg1Hover 0 0 0 2px; background: $btnBg1Hover;}
+    }
+    // 綠色的
+    &.style1>a {
+      background-color: $btnBg3;
+      &:hover, &:focus{box-shadow: $btnBg3Hover 0 0 0 2px;background: $btnBg3Hover;}
+    }
+  }
+
+  
 }
 
 

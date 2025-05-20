@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>海關監控台</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <hgroup>
+      <img class="logo" src="images/logo.png" alt="logo">
+      <img class="title" src="images/h1.svg" alt="內政部移民署"></img>
+      <h1>海關監控台</h1>
+    </hgroup>
+
+    <section class="loginInfo">
+      <ul>
+        <li>移民資訊組系統設計科 10001 測試帳號</li>
+        <li><time>20250206</time><time>19:28:36</time></li>
+        <!-- <li class="logout"><button type="button" >F12 登出</button></li> -->
+      </ul>
+      <ul>
+        <li>202502051129.r3064</li>
+        <li>雲端正式環境</li>
+        <li>WS:0(9107)基隆港國境隊F110101</li>
+      </ul>
+    </section>
+  </header>
+
+  <h2>詳細頁</h2>
+
+  <section class="profile">
+    <div class="photo">
+      <img src="publicData/IDphoto_2.png" alt="旅客相片">
+    </div>
+    <section class="basicInfo">
+      <dl>
+        <div>
+          <dt>中文姓名</dt>
+          <dd>翁測試</dd>
+        </div>
+        <div class="nameEng">
+          <dt>英文姓名</dt>
+          <dd>XSF FSA OWF, XSF FSA OWF, XSF FSA OWF, XSF FSA OWF</dd>
+        </div>
+        <div>
+          <dt>護照號碼</dt>
+          <dd>KRTEST</dd>
+        </div>
+        <div>
+          <dt>護照效期</dt>
+          <dd>2025/04/05</dd>
+        </div>
+        <div>
+          <dt>國籍</dt>
+          <dd>ROC</dd>
+        </div>
+        <div>
+          <dt>查獲時間</dt>
+          <dd>2024/12/30 18:43:09.563</dd>
+        </div>
+        <div>
+          <dt>拍攝日期</dt>
+          <dd>2024/12/12</dd>
+        </div>
+        <div>
+          <dt>出生日期</dt>
+          <dd>1988/05/20</dd>
+        </div>
+        <div>
+          <dt>航班往返地</dt>
+          <dd>ＷFFF01</dd>
+        </div>
+        <div>
+          <dt>性別</dt>
+          <dd>女</dd>
+        </div>
+        <div>
+          <dt>查驗官</dt>
+          <dd>曾好</dd>
+        </div>
+        <div>
+          <dt>查驗台</dt>
+          <dd>9107</dd>
+        </div>
+      </dl>
+    </section>
+  </section>
+
+  
+  <section class="disposalForm">
+    <section class="details">
+      <h3>海關列管處置單</h3>
+      <div class="flexRow">
+        <div class="photo">
+          <span class="th">管制照片</span>
+          <img src="publicData/IDphoto_1.jpg" alt="">
+        </div>
+        <table class="meta">
+          <tr>
+            <th>序號</th>
+            <td>9999135</td>
+            <th>檔案類別</th>
+            <td>海關一般物品緝私檔</td>
+          </tr>
+          <tr>
+            <th>中文姓名</th>
+            <td>翁測試</td>
+            <th>國籍</th>
+            <td>ROC(中華民國)</td>
+          </tr>
+          <tr>
+            <th>英文姓名</th>
+            <td>XSF FSA OWF, XSF FSA OWF, XSF FSA OWF, XSF FSA OWF</td>
+            <th>性別</th>
+            <td>女</td>
+          </tr>
+          <tr>
+            <th>身分證號</th>
+            <td>F227035612</td>
+            <th>生日</th>
+            <td>19880520</td>
+          </tr>
+          <tr>
+            <th>護照號碼</th>
+            <td>302281379</td>
+            <th>外國護照</th>
+            <td>列管理由</td>
+          </tr>
+          <tr>
+            <th>現場事實研判</th>
+            <td>有必要控管者</td>
+            <th>管制效期</th>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    </section>
+  </section>
+
+  <section class="remark">
+    <form action="">
+      <table class="formLayout">
+        <tr>
+          <td>海關檢查註記</td>
+          <td>
+            <div class="optionGroup customsNote">
+              <label><input name="mmm" type="radio">嚴查</label>
+              <label><input name="mmm" type="radio">常川</label>
+              <label><input name="mmm" type="radio">課稅</label>
+              <label class="checked"><input name="mmm" type="radio">抽驗</label>
+              <label><input name="mmm" type="radio">免驗</label>
+              <label><input name="mmm" type="radio">存關退運</label>
+              <label><input name="mmm" type="radio">領隊</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>檢查關員</td>
+          <td>金測試員</td>
+        </tr>
+        <tr>
+          <td>檢查結果</td>
+          <td>
+            <div class="inputGroup">
+              <label>稅<input type="text" value="0"><span class="unit">件</span></label>
+              <label>留關處理<input type="text" value="88880"><span class="unit">件</span></label>
+              <label>存關<input type="text" value="0"><span class="unit">件</span></label>
+              <label>扣押<input type="text" value="0"><span class="unit">件</span></label>
+              <label>驗放<input type="text" value="5"><span class="unit">件</span></label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>行李內容</td>
+          <td><input type="text" value="測試"></td>
+        </tr>
+      </table>
+    </form>
+  </section>
+
+  <div class="btnGroup">
+    <div class="right">
+      <button class="funcBtn" type="button">F4 海關查獲</button>
+      <button class="funcBtn" type="button">F5 無礙</button>
+      <span class="button"><a href="#">F8 列印畫面</a></span>
+      <span class="button"><a href="#">F11 回前頁</a></span>
+    </div>
+  </div>
+
+</body>
+
+</html>

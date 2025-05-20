@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>海關監控台</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <hgroup>
+      <img class="logo" src="images/logo.png" alt="logo">
+      <img class="title" src="images/h1.svg" alt="內政部移民署"></img>
+      <h1>海關監控台</h1>
+    </hgroup>
+
+    <section class="loginInfo">
+      <ul>
+        <li>移民資訊組系統設計科 10001 測試帳號</li>
+        <li><time>20250206</time><time>19:28:36</time></li>
+        <!-- <li class="logout"><button type="button" >F12 登出</button></li> -->
+      </ul>
+      <ul>
+        <li>202502051129.r3064</li>
+        <li>雲端正式環境</li>
+        <li>WS:0(9107)基隆港國境隊F110101</li>
+      </ul>
+    </section>
+  </header>
+
+  <h2>清單畫面</h2>
+  
+  <div class="listCaption">
+    <h3>待查核清單（共2筆）</h3>
+    <div class="dateTime">最新訊息時間：<time>20250206</time><time>19:28:35</time></div>
+  </div>
+  <section class="list">
+    <table>
+      <thead>
+        <tr>
+          <th>班機</th>
+          <th>抵達時間</th>
+          <th>處置</th>
+          <th>中文姓名</th>
+          <th>英文姓名</th>
+          <th>性別</th>
+          <th>國籍</th>
+          <th>護照號碼</th>
+          <th>出生日期</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="now">
+          <td>FFF01</td>
+          <td>1843</td>
+          <td>海關一般特</td>
+          <td>翁測試</td>
+          <td>XSF FSA OWF</td>
+          <td>女</td>
+          <td>ROC</td>
+          <td>KRTEST</td>
+          <td><time>19880520</time></td>
+        </tr>
+        <tr>
+          <td>FFF01</td>
+          <td>1843</td>
+          <td>海關一般特</td>
+          <td>林黛查</td>
+          <td>DAIN CHA LIN</td>
+          <td>女</td>
+          <td>ROC</td>
+          <td>KRTEST</td>
+          <td><time>19990412</time></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="page">
+    <div class="pageGo">
+      <button class="first disabled" type="button"></button>
+      <button class="prev disabled" type="button"></button>
+      <ul class="pageNumbers">
+        <li class="now"><a href="#">1</a></li>
+        </ul>
+        <button class="next disabled" type="button"></button>
+        <button class="last disabled" type="button"></button>
+      </div>
+  </section>
+
+  <div class="listCaption">
+    <h3>已查核清單（共1筆）</h3>
+  </div>
+  <section class="list">
+    <table>
+      <thead>
+        <tr>
+          <th>班機</th>
+          <th>抵達時間</th>
+          <th>處置</th>
+          <th>中文姓名</th>
+          <th>英文姓名</th>
+          <th>性別</th>
+          <th>國籍</th>
+          <th>護照號碼</th>
+          <th>出生日期</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="now">
+          <td>FFF01</td>
+          <td>1843</td>
+          <td>海關一般特</td>
+          <td>乙查</td>
+          <td>ZIN CHA</td>
+          <td>男</td>
+          <td>ROC</td>
+          <td>KRTEST</td>
+          <td><time>20000101</time></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="page">
+    <div class="pageGo">
+      <button class="first disabled" type="button"></button>
+      <button class="prev disabled" type="button"></button>
+      <ul class="pageNumbers">
+        <li class="now"><a href="#">1</a></li>
+        </ul>
+        <button class="next disabled" type="button"></button>
+        <button class="last disabled" type="button"></button>
+      </div>
+  </section>
+
+  <div class="btnGroup">
+    <!-- <div class="left">
+      <span class="button detail"><a href="detail.html">ENTER 詳細</a></span>
+    </div> -->
+
+    <div class="right">
+      <button class="funcBtn" type="button">F4 行李檢查</button>
+      <button class="funcBtn" type="button">F5 列印照片</button>
+      <span class="button"><a href="#">F7 照片畫面</a></span>
+      <span class="button"><a href="#">F12 返回</a></span>
+    </div>
+  </div>
+
+</body>
+
+</html>

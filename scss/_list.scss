@@ -78,3 +78,29 @@
     }
   }
 }
+
+
+// 條列表格上方資訊
+.listCaption{
+  @extend %mainWidth;
+
+  padding: 4px 12px; margin-top: 20px; margin-bottom: 20px;
+
+  display: flex; justify-content: space-between;
+  align-items: center;
+  line-height: 1.2; font-size: inherit;
+
+  h3 {
+    flex: 0 0 auto;
+    margin: 0; font-size: 1.4em;
+  }
+  .dateTime{
+    flex: 0 0 auto;
+    font-size: .9em; color: $hilight;
+    time{
+      display: inline-block;
+      &:last-child {margin-left: .5em;}
+    }
+  }
+
+}
