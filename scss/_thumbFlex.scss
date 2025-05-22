@@ -1,0 +1,55 @@
+// 陸客來臺旅遊統計儀表板
+.dashboard {
+  ul.boards {
+    @extend %mainWidth;
+  
+    list-style: none; margin: 50px auto 8px;padding: 0;
+    display: flex; flex-flow: row wrap; gap: 33px;
+  
+    &>li{
+      flex: 0 0 calc(33.33% - 22px);
+      background: $borderColorDim;
+      border-radius: $radiusL;
+      overflow: hidden;
+    }
+  
+    // 資料標題
+    .head {
+      display: block;
+      padding:12px 16px 8px;
+      font-size: 1.1em; font-weight: bold;
+      line-height: 1; text-align: center;
+      background-color: $thColor; color: $fontInvert;
+    }
+  
+    // 項目總和
+    .summary {
+      display: block; text-align: center;
+      padding:8px 16px;
+      color: $white;
+      font-size: .9em; line-height: 1;
+      em{
+        font-size: 1.22em;
+        display: inline-block; font-weight: bold;
+        margin-left: 8px;
+      }
+      
+    }
+  
+  
+  
+    // 細部資料
+    .grid_3x2{
+      list-style: none; margin: 0;padding: 0;
+      display: flex; flex-flow: row wrap; gap: 1px;
+      &>li{
+        height: 5em;
+        flex: 0 0 33%;
+        background: $white;
+        &:nth-child(3n + 2) {
+          flex-basis: calc(34% - 2px);
+        }
+      }
+    }
+  }
+}
