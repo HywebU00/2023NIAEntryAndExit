@@ -44,7 +44,12 @@
         width: 2px; height: .9em; background: $fontColorDim;
       }
     }
-    dd{ margin: 0; float: left; width:calc(100% - 4.8em); }
+    dd{ margin: 0; float: left; width:calc(100% - 4.8em); 
+    
+      time{
+        &+time{ margin-left: .5em;}
+      }
+    }
   }
 
 }

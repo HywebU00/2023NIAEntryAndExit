@@ -77,7 +77,8 @@ table.meta{
 // 20250520
 ////////////////////////////////////////////////////////////////////////////////////
 // 海關列管處置單
-.disposalForm {
+// 可卷動區
+.scrollBox {
   @extend %mainWidth;
   @extend %roundCorner;
  
@@ -88,10 +89,10 @@ table.meta{
     h3{ margin: 0 auto; padding: 6px 0; font-size: 1.4em;}
 
     .photo{
-      flex: 0 0 250px;
-      padding: 0 24px 10px;  
+      flex: 0 0 250px; width: 250px;
+      padding: 0 24px 20px;  
       .th {
-        display: block; padding: 5px;
+        display: block; padding:8px 5px;
         text-align: center;
       }
       img {
@@ -99,15 +100,65 @@ table.meta{
         border-radius: $radiusM;
       }
     }
+
+
   }
 
-  .flexRow {
-    display: flex; flex-flow: row nowrap;
+  // .flexRow {
+  //   display: flex; flex-flow: row nowrap;
+  //   align-items: flex-start
+  // }
+}
+
+.scrollBox{
+  overflow-y: auto;
+  max-height: calc(100vh - 500px);
+  // height: calc(100vh - 500px);
+  // &:has(+.customsRemark){
+  //   height: auto;
+  //   max-height: calc(100vh - 500px);
+  // } 
+
+  .details{
+    // min-height: calc(100% - 48px);
+    &::after {
+      content: ''; display: block; clear: both;
+    }
+    .photo{
+      float: left;
+      position: sticky; top: -20px;
+    }
+    .meta {
+      width: calc(100% - 250px);
+      margin-left: 250px; margin-bottom: 0;
+      border-width: 1px 0;
+      caption {
+        text-align: left;
+        padding:18px 12px 8px; margin: 0;
+        font-size: .95em; line-height: 1;
+        color: $btnBg1;
+      }
+      td{
+      
+        dl{
+          margin: 0;
+          dt, dd { display: inline-block; text-indent: 0}
+          dt{ color: $fontColorDim;
+            &::after { content: ' ｜'; font-size: .9em;}
+          }
+          dd{ margin: 0;
+            &+dt{margin-left: 2em;}
+          }
+        }
+      }
+
+
+    }
   }
 }
 
 // 海關檢查註記
-.remark {
+.customsRemark {
   @extend %mainWidth; margin-top: 24px;
 
   table.formLayout {
@@ -123,6 +174,7 @@ table.meta{
     }
   }
 }
+
 
 ////////////////////////////////////////////////////////////////////////////////////
 .optionGroup.customsNote{
