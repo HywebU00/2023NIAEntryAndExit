@@ -68,13 +68,11 @@
         .number {
           font-weight: bold; font-size: 1.22em;
           margin: auto auto 0;
-          &.heed { color: $alert;}
+          &.heed { color: #cc007a;}
           &.dim { color: $fontColorDim;}
         }
       }
     }
-
-
 
   }
 }

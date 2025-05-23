@@ -175,17 +175,17 @@ table.meta{
   }
 }
 
-
 ////////////////////////////////////////////////////////////////////////////////////
+// 海關檢查註記
 .optionGroup.customsNote{
   gap: 7px;
   flex-flow: row wrap;
-  &>label{ flex: 0 0 calc(13% - 6px); margin: 0; white-space: nowrap;}
+  &>label{ flex: 0 1 auto; min-width: 7em; margin: 0; white-space: nowrap;}
 }
 
 .inputGroup{
-  display: flex; gap:12px 24px;
-  justify-content: space-between; flex-flow: row wrap;
+  display: flex; gap:12px 36px;
+  flex-flow: row wrap;
   
   label{
     flex: 0 0 auto; white-space: nowrap;
